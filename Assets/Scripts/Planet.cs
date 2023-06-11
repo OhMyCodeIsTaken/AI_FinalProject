@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Planet : MonoBehaviour
 {
+    [SerializeField] private MineralInventory _mineralInventory;
     // Start is called before the first frame update
     void Start()
     {

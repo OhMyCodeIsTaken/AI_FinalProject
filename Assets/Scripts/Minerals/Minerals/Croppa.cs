@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
-public class Jadis : BaseMineral
+[Serializable]
+public class Croppa : BaseMineral
 {
-    
+
 }
