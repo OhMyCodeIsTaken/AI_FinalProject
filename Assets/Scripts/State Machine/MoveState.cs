@@ -20,6 +20,7 @@ public class MoveState : CoroutineState
 
     public override void OnStateExit()
     {
+        handler.Spaceship.OccupyingPlanet = handler.Spaceship.TargetPlanet;
         handler.Spaceship.TargetPlanet = null;
     }
 

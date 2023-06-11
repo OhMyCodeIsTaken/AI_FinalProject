@@ -7,4 +7,6 @@ public class MiningQuest : Quest
 {
     [SerializeField] private MineralMine _mineralToMine;
     [SerializeField] int _amountToMine;
+
+    public MineralMine MineralToMine { get => _mineralToMine; }
 }

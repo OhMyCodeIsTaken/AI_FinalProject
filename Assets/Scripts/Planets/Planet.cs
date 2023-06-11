@@ -5,10 +5,7 @@ using UnityEngine;
 
 public class Planet : MonoBehaviour
 {
-    [SerializeField] protected MineralInventory _mineralInventory;
+    [SerializeField] private MineralInventory mineralInventory;
 
-    
-    
-
-    
+    public MineralInventory MineralInventory { get => mineralInventory; set => mineralInventory = value; }
 }

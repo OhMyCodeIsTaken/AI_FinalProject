@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,25 @@ public class MineralInventory : MonoBehaviour
     [SerializeField] private Umanite _umanite;
 
     private List<BaseMineral> _minerals;
+
+    public bool IsInventoryEmpty
+    {
+        get
+        {
+            foreach (BaseMineral mineral in Minerals)
+            {
+                if(mineral.Amount > 0)
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+    }
+
+    public List<BaseMineral> Minerals { get => _minerals; }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,12 +43,12 @@ public class MineralInventory : MonoBehaviour
         _umanite = new Umanite();
         _minerals = new List<BaseMineral>();
 
-        _minerals.Add(_bismor);
-        _minerals.Add(_jadis);
-        _minerals.Add(_enor);
-        _minerals.Add(_magnite);
-        _minerals.Add(_croppa );
-        _minerals.Add(_umanite);
+        Minerals.Add(_bismor);
+        Minerals.Add(_jadis);
+        Minerals.Add(_enor);
+        Minerals.Add(_magnite);
+        Minerals.Add(_croppa );
+        Minerals.Add(_umanite);
 
 
         // Test
@@ -41,11 +61,19 @@ public class MineralInventory : MonoBehaviour
         //AddMineralToInventory(jadisToAdd);
     }
 
-    public void TransferMineralToInventory(BaseMineral mineralToTransfer)
+    public void TransferMineralToInventory(BaseMineral mineralToTransferFrom, int amountToTransfer)
     {
-        if(AddMineralToInventory(mineralToTransfer))
+        if(amountToTransfer > mineralToTransferFrom.Amount)
         {
-            mineralToTransfer.Amount = 0; // Removes Minerals from origin
+            Debug.LogWarning("Attempted to transfer too much!");
+            return;
+        }
+
+        BaseMineral tempMineral = (BaseMineral)Activator.CreateInstance(mineralToTransferFrom.GetType());
+        tempMineral.Amount = amountToTransfer;
+        if (AddMineralToInventory(tempMineral))
+        {
+            mineralToTransferFrom.Amount -= amountToTransfer; // Removes Minerals from origin
         }     
     }
     public bool AddMineralToInventory(BaseMineral mineralToAdd)
@@ -56,7 +84,7 @@ public class MineralInventory : MonoBehaviour
             return false;
         }
 
-        foreach (BaseMineral mineral in _minerals)
+        foreach (BaseMineral mineral in Minerals)
         {
             if(mineralToAdd.GetType() == mineral.GetType())
             {

@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ec585075cfcc3041886e9eb3128d5bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mineralInventory: {fileID: 1531949752473780461}
+  mineralInventory: {fileID: 1531949752473780461}
   _miningElapsedTime: 0
   _miningCooldown: 5
   _primaryMine: {fileID: 0}

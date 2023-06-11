@@ -185,7 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93e8d858234233d4aa04a5fb3a92f713, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Priority: 1
+  Priority: 4
 --- !u!114 &172589159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,6 +201,37 @@ MonoBehaviour:
   _movementMod: 1
   _occupyingPlanet: {fileID: 1682729892}
   _targetPlanet: {fileID: 0}
+  _currentMiningQuest: {fileID: 0}
+  _mineralInventory: {fileID: 744848528695374692}
+--- !u!114 &172589162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172589156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbe6a59e2ebac3043853b48d75b5cca6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Priority: 3
+--- !u!114 &172589163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172589156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a3c15d4e1a8f7f479a22e8d525ba27c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Priority: 2
+  _depositElapsedTime: 0
+  _depositCooldown: 5
+  _depositAmount: 3
 --- !u!1001 &279423529
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -523,6 +554,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Planet (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
+      propertyPath: _primaryMine
+      value: 
+      objectReference: {fileID: 11400000, guid: 8cfa3fe297c9f1b4ebc81e77d9d52b4a, type: 2}
+    - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
+      propertyPath: _secondaryMine
+      value: 
+      objectReference: {fileID: 11400000, guid: e91a49fcec27b4f4c8d148af314b9b90, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
 --- !u!4 &894126507 stripped
@@ -906,6 +945,7 @@ GameObject:
   - component: {fileID: 1682729890}
   - component: {fileID: 1682729889}
   - component: {fileID: 1682729892}
+  - component: {fileID: 1682729894}
   - component: {fileID: 1682729893}
   m_Layer: 0
   m_Name: Home Planet
@@ -1004,8 +1044,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df85be02862b80b44a3bd58e485fb734, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mineralInventory: {fileID: 1682729893}
+  mineralInventory: {fileID: 0}
   _mineralPlanets: []
+  QuestManager: {fileID: 1682729894}
 --- !u!114 &1682729893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1030,6 +1071,21 @@ MonoBehaviour:
     Amount: 0
   _umanite:
     Amount: 0
+--- !u!114 &1682729894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1682729887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 239e6e910c6a1a542aa51186d8bb1ac9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _miningQuests:
+  - {fileID: 11400000, guid: 40908cc458a588e4e964e4a09c56878e, type: 2}
+  - {fileID: 11400000, guid: 5c16602f10551014e82cdab386410669, type: 2}
 --- !u!1001 &1838352959
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1339,14 +1395,53 @@ PrefabInstance:
       objectReference: {fileID: 172589159}
     - target: {fileID: 1692184563175696007, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
       propertyPath: states.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1692184563175696007, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
       propertyPath: states.Array.data[1]
       value: 
       objectReference: {fileID: 172589158}
+    - target: {fileID: 1692184563175696007, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
+      propertyPath: states.Array.data[2]
+      value: 
+      objectReference: {fileID: 172589162}
+    - target: {fileID: 4434681820794712636, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
+      propertyPath: _enor.Amount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434681820794712636, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
+      propertyPath: _jadis.Amount
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434681820794712636, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
+      propertyPath: _bismor.Amount
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434681820794712636, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
+      propertyPath: _croppa.Amount
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434681820794712636, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
+      propertyPath: _magnite.Amount
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434681820794712636, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
+      propertyPath: _umanite.Amount
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
+--- !u!114 &744848528695374692 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4434681820794712636, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
+  m_PrefabInstance: {fileID: 744848528695374691}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172589156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 760f454934fcb9140b14dbbf6355836b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1531949751990099419
 PrefabInstance:
   m_ObjectHideFlags: 0
