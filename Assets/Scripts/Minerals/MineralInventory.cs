@@ -32,13 +32,13 @@ public class MineralInventory : MonoBehaviour
 
 
         // Test
-        Bismor bismorToAdd = new Bismor();
-        bismorToAdd.Amount = 3;
-        AddMineralToInventory(bismorToAdd);
+        //Bismor bismorToAdd = new Bismor();
+        //bismorToAdd.Amount = 3;
+        //AddMineralToInventory(bismorToAdd);
 
-        Jadis jadisToAdd = new Jadis();
-        jadisToAdd.Amount = 2;
-        AddMineralToInventory(jadisToAdd);
+        //Jadis jadisToAdd = new Jadis();
+        //jadisToAdd.Amount = 2;
+        //AddMineralToInventory(jadisToAdd);
     }
 
     public void TransferMineralToInventory(BaseMineral mineralToTransfer)

@@ -374,6 +374,7 @@ GameObject:
   - component: {fileID: 619486516}
   - component: {fileID: 619486515}
   - component: {fileID: 619486518}
+  - component: {fileID: 619486519}
   m_Layer: 0
   m_Name: Planet (12)
   m_TagString: Untagged
@@ -483,6 +484,25 @@ MonoBehaviour:
     Amount: 0
   _umanite:
     Amount: 0
+--- !u!114 &619486519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619486513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c4a6be5d7fd8ad48bbd42b92c000f0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mineralInventory: {fileID: 619486518}
+  _miningElapsedTime: 0
+  _miningCooldown: 5
+  _primaryMine: {fileID: 11400000, guid: 12ee39a0349b19d48aab5886f4f314e6, type: 2}
+  _secondaryMine: {fileID: 11400000, guid: 8cfa3fe297c9f1b4ebc81e77d9d52b4a, type: 2}
+  _primaryMineralProduce: 3
+  _secondaryMineralProduce: 2
 --- !u!1 &680748150
 GameObject:
   m_ObjectHideFlags: 0
@@ -1191,7 +1211,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 4f21867551abbfd469e2ea01865d3d9a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

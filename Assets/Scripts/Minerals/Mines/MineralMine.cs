@@ -1,9 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "ScriptableObjects", menuName = "ScriptableObjects/MineralMine", order = 1)]
+[CreateAssetMenu(fileName = "ScriptableObjects", menuName = "ScriptableObjects/MineralMines/MineralMine", order = 1)]
 abstract public class MineralMine : ScriptableObject
 {
-    public BaseMineral Mineral;
+    protected BaseMineral _mineral;
+
+    public BaseMineral Mineral
+    {
+        get
+        {
+            if(_mineral == null)
+            {
+                InitMineralType();
+            }
+            return _mineral;
+        }
+    }
+
+    public abstract void InitMineralType();
 }
