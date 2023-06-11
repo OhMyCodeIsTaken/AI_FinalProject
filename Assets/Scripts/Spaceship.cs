@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class Spaceship : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private float _movementMod;
+    [SerializeField] private Planet _occupyingPlanet;
+    [SerializeField] private Planet _targetPlanet;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public float MovementMod { get => _movementMod; set => _movementMod = value; }
+    public Planet OccupyingPlanet { get => _occupyingPlanet; protected set => _occupyingPlanet = value; }
+    public Planet TargetPlanet { get => _targetPlanet; set => _targetPlanet = value; }
 }

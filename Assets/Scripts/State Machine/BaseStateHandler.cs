@@ -9,6 +9,8 @@ public class BaseStateHandler : MonoBehaviour
     //[SerializeField] private Enemy refEnemy;
     private CoroutineState activeState;
 
+    [SerializeField] public Spaceship Spaceship;
+
     //public Enemy RefEnemy { get => refEnemy; }
 
     private void Start()
@@ -35,7 +37,7 @@ public class BaseStateHandler : MonoBehaviour
     }
     private void SortStates()
     {
-        states.Sort((p1, p2) => p1.priority.CompareTo(p2.priority));
+        states.Sort((p1, p2) => p1.Priority.CompareTo(p2.Priority));
     }
     private void SubscribeHandler()
     {

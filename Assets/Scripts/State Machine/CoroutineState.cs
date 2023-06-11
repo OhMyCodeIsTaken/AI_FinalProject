@@ -5,7 +5,7 @@ using UnityEngine;
 public abstract class CoroutineState : MonoBehaviour
 {
     protected BaseStateHandler handler;
-    public int priority;
+    public int Priority;
 
     public void CacheHandler(BaseStateHandler handler)
     {

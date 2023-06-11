@@ -1,12 +1,10 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
-public class Planet : MonoBehaviour
+public class MineralPlanet : Planet
 {
-    [SerializeField] private MineralInventory _mineralInventory;
-
     [SerializeField] private float _miningElapsedTime;
     [SerializeField] private float _miningCooldown;
 
@@ -19,9 +17,17 @@ public class Planet : MonoBehaviour
 
     [SerializeField] private int _primaryMineralProduce;
     [SerializeField] private int _secondaryMineralProduce;
-    // Start is called before the first frame update
+
     void Start()
     {
+
+        if(_primaryMine == null || _secondaryMine == null)
+        {
+            return;
+        }
+
+        GameManager.Instance.HomePlanet.MineralPlanets.Add(this);
+
         _primaryMinedMineral = (BaseMineral)Activator.CreateInstance(_primaryMine.Mineral.GetType());
         _primaryMinedMineral.Amount = _primaryMineralProduce;
 
@@ -33,9 +39,9 @@ public class Planet : MonoBehaviour
 
     private IEnumerator MineMineral()
     {
-        while(true)
+        while (true)
         {
-            if(_miningElapsedTime >= _miningCooldown)
+            if (_miningElapsedTime >= _miningCooldown)
             {
                 _mineralInventory.AddMineralToInventory(_primaryMinedMineral);
                 _mineralInventory.AddMineralToInventory(_secondaryMinedMineral);
@@ -47,6 +53,6 @@ public class Planet : MonoBehaviour
             _miningElapsedTime += Time.deltaTime;
             yield return null;
         }
-        
+
     }
 }

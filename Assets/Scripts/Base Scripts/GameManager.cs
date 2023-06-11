@@ -4,15 +4,7 @@ using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private HomePlanet _homePlanet;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public HomePlanet HomePlanet { get => _homePlanet;}
 }

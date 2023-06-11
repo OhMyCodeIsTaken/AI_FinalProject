@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b4f68806b349c74babc8bc1ba6a02c2, type: 3}
+  m_Name: CroppaSmallQuest
+  m_EditorClassIdentifier: 
+  _mineralToMine: {fileID: 11400000, guid: c876a288b924972408aa89b08a40db14, type: 2}
+  _amountToMine: 15
