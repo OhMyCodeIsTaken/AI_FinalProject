@@ -863,7 +863,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.14168744, g: 0.14528698, b: 0.1509434, a: 0}
+  m_BackGroundColor: {r: 0.060742237, g: 0.06338998, b: 0.066037714, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1504,27 +1504,27 @@ PrefabInstance:
       objectReference: {fileID: 744848528695374693}
     - target: {fileID: 4434681820794712636, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
       propertyPath: _enor.Amount
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4434681820794712636, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
       propertyPath: _jadis.Amount
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4434681820794712636, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
       propertyPath: _bismor.Amount
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4434681820794712636, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
       propertyPath: _croppa.Amount
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4434681820794712636, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
       propertyPath: _magnite.Amount
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4434681820794712636, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
       propertyPath: _umanite.Amount
-      value: 15
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
