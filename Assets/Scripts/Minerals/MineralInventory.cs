@@ -33,7 +33,7 @@ public class MineralInventory : MonoBehaviour
     public List<BaseMineral> Minerals { get => _minerals; }
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         _bismor = new Bismor();
         _jadis = new Jadis();
