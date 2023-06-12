@@ -202,6 +202,7 @@ MonoBehaviour:
   _occupyingPlanet: {fileID: 1682729892}
   _targetPlanet: {fileID: 0}
   _currentMiningQuest: {fileID: 0}
+  IsQuestOngoing: 0
   _mineralInventory: {fileID: 744848528695374692}
 --- !u!114 &172589162
 MonoBehaviour:
@@ -285,8 +286,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1531949752473780458, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
       propertyPath: m_Name
-      value: Planet (9)
+      value: Shiva
       objectReference: {fileID: 0}
+    - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
+      propertyPath: _primaryMine
+      value: 
+      objectReference: {fileID: 11400000, guid: c876a288b924972408aa89b08a40db14, type: 2}
+    - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
+      propertyPath: _secondaryMine
+      value: 
+      objectReference: {fileID: 11400000, guid: 8cfa3fe297c9f1b4ebc81e77d9d52b4a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
 --- !u!4 &279423530 stripped
@@ -347,8 +356,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1531949752473780458, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
       propertyPath: m_Name
-      value: Planet (5)
+      value: Persephone
       objectReference: {fileID: 0}
+    - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
+      propertyPath: _primaryMine
+      value: 
+      objectReference: {fileID: 11400000, guid: 12ee39a0349b19d48aab5886f4f314e6, type: 2}
+    - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
+      propertyPath: _secondaryMine
+      value: 
+      objectReference: {fileID: 11400000, guid: 8cfa3fe297c9f1b4ebc81e77d9d52b4a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
 --- !u!4 &436747817 stripped
@@ -552,16 +569,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1531949752473780458, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
       propertyPath: m_Name
-      value: Planet (1)
+      value: Demeter
       objectReference: {fileID: 0}
     - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
       propertyPath: _primaryMine
       value: 
-      objectReference: {fileID: 11400000, guid: 8cfa3fe297c9f1b4ebc81e77d9d52b4a, type: 2}
+      objectReference: {fileID: 11400000, guid: 2f2994523b9a3b643a9c9fca13766a49, type: 2}
     - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
       propertyPath: _secondaryMine
       value: 
-      objectReference: {fileID: 11400000, guid: e91a49fcec27b4f4c8d148af314b9b90, type: 2}
+      objectReference: {fileID: 11400000, guid: c876a288b924972408aa89b08a40db14, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
 --- !u!4 &894126507 stripped
@@ -653,8 +670,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1531949752473780458, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
       propertyPath: m_Name
-      value: Planet (7)
+      value: Poseidon
       objectReference: {fileID: 0}
+    - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
+      propertyPath: _primaryMine
+      value: 
+      objectReference: {fileID: 11400000, guid: 7bb2aeb34a3f02a46ba677995ab6a36a, type: 2}
+    - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
+      propertyPath: _secondaryMine
+      value: 
+      objectReference: {fileID: 11400000, guid: c876a288b924972408aa89b08a40db14, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
 --- !u!4 &912466154 stripped
@@ -715,8 +740,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1531949752473780458, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
       propertyPath: m_Name
-      value: Planet (6)
+      value: Ares
       objectReference: {fileID: 0}
+    - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
+      propertyPath: _primaryMine
+      value: 
+      objectReference: {fileID: 11400000, guid: e91a49fcec27b4f4c8d148af314b9b90, type: 2}
+    - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
+      propertyPath: _secondaryMine
+      value: 
+      objectReference: {fileID: 11400000, guid: 2f2994523b9a3b643a9c9fca13766a49, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
 --- !u!4 &936590362 stripped
@@ -777,8 +810,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1531949752473780458, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
       propertyPath: m_Name
-      value: Planet (11)
+      value: Hestia
       objectReference: {fileID: 0}
+    - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
+      propertyPath: _primaryMine
+      value: 
+      objectReference: {fileID: 11400000, guid: 12ee39a0349b19d48aab5886f4f314e6, type: 2}
+    - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
+      propertyPath: _secondaryMine
+      value: 
+      objectReference: {fileID: 11400000, guid: 7bb2aeb34a3f02a46ba677995ab6a36a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
 --- !u!4 &961305849 stripped
@@ -923,8 +964,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1531949752473780458, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
       propertyPath: m_Name
-      value: Planet (3)
+      value: Hades
       objectReference: {fileID: 0}
+    - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
+      propertyPath: _primaryMine
+      value: 
+      objectReference: {fileID: 11400000, guid: c876a288b924972408aa89b08a40db14, type: 2}
+    - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
+      propertyPath: _secondaryMine
+      value: 
+      objectReference: {fileID: 11400000, guid: e91a49fcec27b4f4c8d148af314b9b90, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
 --- !u!4 &1081347283 stripped
@@ -1044,7 +1093,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df85be02862b80b44a3bd58e485fb734, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mineralInventory: {fileID: 0}
+  mineralInventory: {fileID: 1682729893}
   _mineralPlanets: []
   QuestManager: {fileID: 1682729894}
 --- !u!114 &1682729893
@@ -1086,6 +1135,10 @@ MonoBehaviour:
   _miningQuests:
   - {fileID: 11400000, guid: 40908cc458a588e4e964e4a09c56878e, type: 2}
   - {fileID: 11400000, guid: 5c16602f10551014e82cdab386410669, type: 2}
+  - {fileID: 11400000, guid: ae14086d178ec2d4ab29a318ea4eb22e, type: 2}
+  - {fileID: 11400000, guid: 82f1b694aea7f2348a2b1a410f8cc93b, type: 2}
+  - {fileID: 11400000, guid: de3a8ce0e01e9a24f95b723cf56808c2, type: 2}
+  - {fileID: 11400000, guid: 765566e3db72898478bb05e4bd35b2b1, type: 2}
 --- !u!1001 &1838352959
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1139,8 +1192,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1531949752473780458, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
       propertyPath: m_Name
-      value: Planet (8)
+      value: Alignak
       objectReference: {fileID: 0}
+    - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
+      propertyPath: _primaryMine
+      value: 
+      objectReference: {fileID: 11400000, guid: 8cfa3fe297c9f1b4ebc81e77d9d52b4a, type: 2}
+    - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
+      propertyPath: _secondaryMine
+      value: 
+      objectReference: {fileID: 11400000, guid: e91a49fcec27b4f4c8d148af314b9b90, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
 --- !u!4 &1838352960 stripped
@@ -1201,8 +1262,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1531949752473780458, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
       propertyPath: m_Name
-      value: Planet (10)
+      value: Zeus
       objectReference: {fileID: 0}
+    - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
+      propertyPath: _primaryMine
+      value: 
+      objectReference: {fileID: 11400000, guid: 2f2994523b9a3b643a9c9fca13766a49, type: 2}
+    - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
+      propertyPath: _secondaryMine
+      value: 
+      objectReference: {fileID: 11400000, guid: 12ee39a0349b19d48aab5886f4f314e6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
 --- !u!4 &1840087944 stripped
@@ -1263,8 +1332,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1531949752473780458, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
       propertyPath: m_Name
-      value: Planet (2)
+      value: Gaia
       objectReference: {fileID: 0}
+    - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
+      propertyPath: _primaryMine
+      value: 
+      objectReference: {fileID: 11400000, guid: 8cfa3fe297c9f1b4ebc81e77d9d52b4a, type: 2}
+    - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
+      propertyPath: _secondaryMine
+      value: 
+      objectReference: {fileID: 11400000, guid: 7bb2aeb34a3f02a46ba677995ab6a36a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
 --- !u!4 &1852425010 stripped
@@ -1325,8 +1402,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1531949752473780458, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
       propertyPath: m_Name
-      value: Planet (4)
+      value: Artemis
       objectReference: {fileID: 0}
+    - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
+      propertyPath: _primaryMine
+      value: 
+      objectReference: {fileID: 11400000, guid: 7bb2aeb34a3f02a46ba677995ab6a36a, type: 2}
+    - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
+      propertyPath: _secondaryMine
+      value: 
+      objectReference: {fileID: 11400000, guid: 2f2994523b9a3b643a9c9fca13766a49, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
 --- !u!4 &1874795941 stripped
@@ -1395,7 +1480,7 @@ PrefabInstance:
       objectReference: {fileID: 172589159}
     - target: {fileID: 1692184563175696007, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
       propertyPath: states.Array.size
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1692184563175696007, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
       propertyPath: states.Array.data[1]
@@ -1405,6 +1490,14 @@ PrefabInstance:
       propertyPath: states.Array.data[2]
       value: 
       objectReference: {fileID: 172589162}
+    - target: {fileID: 1692184563175696007, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
+      propertyPath: states.Array.data[3]
+      value: 
+      objectReference: {fileID: 172589163}
+    - target: {fileID: 1692184563175696007, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
+      propertyPath: states.Array.data[4]
+      value: 
+      objectReference: {fileID: 744848528695374693}
     - target: {fileID: 4434681820794712636, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
       propertyPath: _enor.Amount
       value: 3
@@ -1442,6 +1535,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 760f454934fcb9140b14dbbf6355836b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &744848528695374693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172589156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55afd665e298f9946b2ee756082a4feb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Priority: 1
+  _mineElapsedTime: 0
+  _mineCooldown: 3
+  _mineAmount: 4
 --- !u!1001 &1531949751990099419
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1495,7 +1604,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1531949752473780458, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
       propertyPath: m_Name
-      value: Planet
+      value: Haphestus
       objectReference: {fileID: 0}
     - target: {fileID: 1531949752473780460, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
       propertyPath: _primaryMine
@@ -1508,10 +1617,10 @@ PrefabInstance:
     - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
       propertyPath: _primaryMine
       value: 
-      objectReference: {fileID: 11400000, guid: 12ee39a0349b19d48aab5886f4f314e6, type: 2}
+      objectReference: {fileID: 11400000, guid: e91a49fcec27b4f4c8d148af314b9b90, type: 2}
     - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
       propertyPath: _secondaryMine
       value: 
-      objectReference: {fileID: 11400000, guid: 2f2994523b9a3b643a9c9fca13766a49, type: 2}
+      objectReference: {fileID: 11400000, guid: 12ee39a0349b19d48aab5886f4f314e6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}

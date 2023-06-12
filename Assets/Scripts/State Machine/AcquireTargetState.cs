@@ -31,6 +31,10 @@ public class AcquireTargetState : CoroutineState
         }
         else
         {
+
+            // TODO: consider making this more generic
+            // handler.Spaceship.TargetPlanet = OnAcquireTarget.Invoke();
+
             // Get Mining Quest
             System.Random rand = new System.Random();
 
@@ -38,6 +42,7 @@ public class AcquireTargetState : CoroutineState
             int randomIndex = rand.Next(0, questsRef.Count);
 
             handler.Spaceship.CurrentMiningQuest = questsRef[randomIndex];
+            handler.Spaceship.IsQuestOngoing = true;
 
             MiningQuest miningQuestRef = (MiningQuest)handler.Spaceship.CurrentMiningQuest;
 

@@ -10,6 +10,8 @@ public class Spaceship : MonoBehaviour
 
     [SerializeField] private Quest _currentMiningQuest;
 
+    public bool IsQuestOngoing = false;
+
     [SerializeField] private MineralInventory _mineralInventory;
 
     public Quest CurrentMiningQuest { get => _currentMiningQuest; set => _currentMiningQuest = value; }
