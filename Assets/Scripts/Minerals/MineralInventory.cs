@@ -12,7 +12,7 @@ public class MineralInventory : MonoBehaviour
     [SerializeField] private Croppa _croppa;
     [SerializeField] private Umanite _umanite;
 
-    private List<BaseMineral> _minerals;
+    [SerializeField] private List<BaseMineral> _minerals;
 
     public bool IsInventoryEmpty
     {
@@ -35,6 +35,7 @@ public class MineralInventory : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        InitializeMineralList();
         _bismor = new Bismor();
         _jadis = new Jadis();
         _enor = new Enor();
@@ -59,6 +60,23 @@ public class MineralInventory : MonoBehaviour
         //Jadis jadisToAdd = new Jadis();
         //jadisToAdd.Amount = 2;
         //AddMineralToInventory(jadisToAdd);
+    }
+
+    void InitializeMineralList()
+    {
+        string[] mineralTypeNames = Enum.GetNames(typeof(MineralType));
+        int numberOfMineralTypes = mineralTypeNames.Length;
+
+        Debug.Log(numberOfMineralTypes);
+
+        for (int i = 1; i < numberOfMineralTypes; i++) // i starts at 1 because we want to skip 0 (MineralType.NONE)
+        {   
+            BaseMineral newBaseMineral = new BaseMineral( (MineralType)i );
+
+            Minerals.Add(newBaseMineral);
+        }
+
+
     }
 
     public void TransferMineralToInventory(BaseMineral mineralToTransferFrom, int amountToTransfer)

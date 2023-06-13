@@ -112,16 +112,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bismor:
+    MineralType: 0
     Amount: 0
   _jadis:
+    MineralType: 0
     Amount: 0
   _enor:
+    MineralType: 0
     Amount: 0
   _magnite:
+    MineralType: 0
     Amount: 0
   _croppa:
+    MineralType: 0
     Amount: 0
   _umanite:
+    MineralType: 0
+    Amount: 0
+  _minerals:
+  - MineralType: 0
     Amount: 0
 --- !u!114 &6711545428137439334
 MonoBehaviour:
