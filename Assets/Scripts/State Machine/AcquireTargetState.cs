@@ -51,8 +51,8 @@ public class AcquireTargetState : CoroutineState
 
             foreach (MineralPlanet potentialPlanet in GameManager.Instance.HomePlanet.MineralPlanets)
             {
-                if(potentialPlanet.PrimaryMinedMineral.GetType() == miningQuestRef.MineralToMine.Mineral.GetType() ||
-                   potentialPlanet.SecondaryMinedMineral.GetType() == miningQuestRef.MineralToMine.Mineral.GetType() )
+                if(potentialPlanet.PrimaryMinedMineral.MineralType == miningQuestRef.MineralToMine ||
+                   potentialPlanet.SecondaryMinedMineral.MineralType == miningQuestRef.MineralToMine )
                 {
                     validMineralPlanets.Add(potentialPlanet);
                 }

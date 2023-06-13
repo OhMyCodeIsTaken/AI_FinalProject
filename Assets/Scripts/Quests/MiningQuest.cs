@@ -5,9 +5,9 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "ScriptableObjects", menuName = "ScriptableObjects/MiningQuest", order = 1)]
 public class MiningQuest : Quest
 {
-    [SerializeField] private MineralMine _mineralToMine;
+    [SerializeField] private MineralType _mineralToMine;
     [SerializeField] int _amountToMine;
 
-    public MineralMine MineralToMine { get => _mineralToMine; }
+    public MineralType MineralToMine { get => _mineralToMine; }
     public int AmountToMine { get => _amountToMine; }
 }

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b4f68806b349c74babc8bc1ba6a02c2, type: 3}
   m_Name: BismorSmallQuest
   m_EditorClassIdentifier: 
-  _mineralToMine: {fileID: 11400000, guid: 12ee39a0349b19d48aab5886f4f314e6, type: 2}
+  _mineralToMine: 1
   _amountToMine: 15

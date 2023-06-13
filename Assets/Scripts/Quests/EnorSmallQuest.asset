@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b4f68806b349c74babc8bc1ba6a02c2, type: 3}
   m_Name: EnorSmallQuest
   m_EditorClassIdentifier: 
-  _mineralToMine: {fileID: 11400000, guid: 2f2994523b9a3b643a9c9fca13766a49, type: 2}
+  _mineralToMine: 3
   _amountToMine: 15

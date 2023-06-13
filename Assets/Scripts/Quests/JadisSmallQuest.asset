@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b4f68806b349c74babc8bc1ba6a02c2, type: 3}
   m_Name: JadisSmallQuest
   m_EditorClassIdentifier: 
-  _mineralToMine: {fileID: 11400000, guid: 8cfa3fe297c9f1b4ebc81e77d9d52b4a, type: 2}
+  _mineralToMine: 4
   _amountToMine: 15

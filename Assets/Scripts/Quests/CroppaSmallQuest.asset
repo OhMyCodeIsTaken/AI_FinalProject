@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b4f68806b349c74babc8bc1ba6a02c2, type: 3}
   m_Name: CroppaSmallQuest
   m_EditorClassIdentifier: 
-  _mineralToMine: {fileID: 11400000, guid: c876a288b924972408aa89b08a40db14, type: 2}
+  _mineralToMine: 2
   _amountToMine: 15

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class MineState : CoroutineState
 {
-    BaseMineral mineralRef;
+    Mineral mineralRef;
     MiningQuest currentMiningQuestRef;
 
 
@@ -25,9 +25,9 @@ public class MineState : CoroutineState
     public override void OnStateEnter()
     {
         currentMiningQuestRef = (MiningQuest)handler.Spaceship.CurrentMiningQuest;
-        foreach (BaseMineral mineral in handler.Spaceship.MineralInventory.Minerals)
+        foreach (Mineral mineral in handler.Spaceship.MineralInventory.NewMinerals)
         {
-            if(mineral.GetType() == currentMiningQuestRef.MineralToMine.Mineral.GetType())
+            if(mineral.MineralType == currentMiningQuestRef.MineralToMine)
             {
                 mineralRef = mineral;
                 return;
@@ -47,20 +47,20 @@ public class MineState : CoroutineState
             if (_mineElapsedTime >= _mineCooldown)
             {
                 _mineElapsedTime = 0;
-                foreach (BaseMineral mineral in handler.Spaceship.OccupyingPlanet.MineralInventory.Minerals)
+                foreach (Mineral planetMineral in handler.Spaceship.OccupyingPlanet.MineralInventory.NewMinerals)
                 {
-                    if (mineral.Amount > 0)
+                    if (planetMineral.Amount > 0)
                     {
-                        int amountToDeposit;
-                        if (mineral.Amount >= _mineAmount)
+                        int amountToMine;
+                        if (planetMineral.Amount >= _mineAmount)
                         {
-                            amountToDeposit = _mineAmount;
+                            amountToMine = _mineAmount;
                         }
                         else
                         {
-                            amountToDeposit = mineral.Amount;
+                            amountToMine = planetMineral.Amount;
                         }
-                        handler.Spaceship.MineralInventory.TransferMineralToInventory(mineral, amountToDeposit);
+                        handler.Spaceship.MineralInventory.TransferMineralToInventory(planetMineral, amountToMine);
                     }
                 }
             }

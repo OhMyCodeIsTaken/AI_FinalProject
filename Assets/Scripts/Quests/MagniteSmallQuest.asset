@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b4f68806b349c74babc8bc1ba6a02c2, type: 3}
   m_Name: MagniteSmallQuest
   m_EditorClassIdentifier: 
-  _mineralToMine: {fileID: 11400000, guid: e91a49fcec27b4f4c8d148af314b9b90, type: 2}
+  _mineralToMine: 5
   _amountToMine: 15

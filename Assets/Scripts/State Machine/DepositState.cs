@@ -37,20 +37,20 @@ public class DepositState : CoroutineState
             if(_depositElapsedTime >= _depositCooldown)
             {
                 _depositElapsedTime = 0;
-                foreach (BaseMineral mineral in handler.Spaceship.MineralInventory.Minerals)
+                foreach (Mineral spaceshipMineral in handler.Spaceship.MineralInventory.NewMinerals)
                 {
-                    if (mineral.Amount > 0)
+                    if (spaceshipMineral.Amount > 0)
                     {
                         int amountToDeposit;
-                        if(mineral.Amount >= _depositAmount)
+                        if(spaceshipMineral.Amount >= _depositAmount)
                         {
                             amountToDeposit = _depositAmount;
                         }
                         else
                         {
-                            amountToDeposit = mineral.Amount;
+                            amountToDeposit = spaceshipMineral.Amount;
                         }
-                        GameManager.Instance.HomePlanet.MineralInventory.TransferMineralToInventory(mineral, amountToDeposit);
+                        GameManager.Instance.HomePlanet.MineralInventory.TransferMineralToInventory(spaceshipMineral, amountToDeposit);
                     }
                 }   
             }
