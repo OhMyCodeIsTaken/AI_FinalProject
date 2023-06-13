@@ -52,11 +52,11 @@ public class MineralInventory : MonoBehaviour
             return false;
         }
 
-        foreach (Mineral mineral in Minerals)
+        foreach (Mineral mineralInInventory in Minerals)
         {
-            if (mineralToAdd.MineralType == mineral.MineralType)
+            if (mineralToAdd.MineralType == mineralInInventory.MineralType)
             {
-                mineral.Amount += mineralToAdd.Amount;
+                mineralInInventory.Amount += mineralToAdd.Amount;
                 return true; // found corresponding mineral type in inventory, successfully added
             }
         }
