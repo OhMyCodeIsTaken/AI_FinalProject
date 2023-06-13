@@ -14,6 +14,8 @@ public class MineralInventory : MonoBehaviour
 
     [SerializeField] private List<BaseMineral> _minerals;
 
+    [SerializeField] private List<Mineral> _newMinerals;
+
     public bool IsInventoryEmpty
     {
         get
@@ -31,6 +33,7 @@ public class MineralInventory : MonoBehaviour
     }
 
     public List<BaseMineral> Minerals { get => _minerals; }
+    public List<Mineral> NewMinerals { get => _newMinerals; }
 
     // Start is called before the first frame update
     void Awake()
@@ -71,12 +74,10 @@ public class MineralInventory : MonoBehaviour
 
         for (int i = 1; i < numberOfMineralTypes; i++) // i starts at 1 because we want to skip 0 (MineralType.NONE)
         {   
-            BaseMineral newBaseMineral = new BaseMineral( (MineralType)i );
+            Mineral newMineral = new Mineral( (MineralType)i );
 
-            Minerals.Add(newBaseMineral);
+            NewMinerals.Add(newMineral);
         }
-
-
     }
 
     public void TransferMineralToInventory(BaseMineral mineralToTransferFrom, int amountToTransfer)
