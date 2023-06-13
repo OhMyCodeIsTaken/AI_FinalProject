@@ -136,6 +136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mineralInventory: {fileID: 1531949752473780461}
+  rotationSpeed: 30
   _miningElapsedTime: 0
   _miningCooldown: 5
   _primaryMine: {fileID: 0}

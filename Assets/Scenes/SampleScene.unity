@@ -1130,6 +1130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mineralInventory: {fileID: 1682729893}
+  rotationSpeed: 15
   _mineralPlanets: []
   QuestManager: {fileID: 1682729894}
 --- !u!114 &1682729893
