@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1de2f37cb814674b8612ce3013594bf, type: 3}
-  m_Name: Kore Planet Asset
+  m_Name: Ares Planet Asset
   m_EditorClassIdentifier: 
-  seedSurface: 1822096987
-  seedLand: 1821845103
-  seedLandColour01: 807408736
-  seedLandColour23: 1266077451
-  seedCity: 156797361
-  seedCloud: 1555131593
+  seedSurface: 808253486
+  seedLand: 1892265688
+  seedLandColour01: 707316038
+  seedLandColour23: 2108176359
+  seedCity: 1637922197
+  seedCloud: 201848513
   surfaceNoise:
     scale: 0.9
     octaves: 10
@@ -38,10 +38,10 @@ MonoBehaviour:
     smearOctaves: 1
     smearFalloff: 1.04
     smearIntensity: 1.61
-  landColour0: {r: 0.3372549, g: 0.62352943, b: 0.45882353, a: 1}
-  landColour1: {r: 0.3372549, g: 0.62352943, b: 0.45882356, a: 1}
-  landColour2: {r: 0.3372549, g: 0.62352943, b: 0.45882356, a: 1}
-  landColour3: {r: 0.29411766, g: 0.4627451, b: 0.3647059, a: 1}
+  landColour0: {r: 0.5882353, g: 0.7647059, b: 0.7372549, a: 1}
+  landColour1: {r: 0.5882353, g: 0.76470596, b: 0.7372549, a: 1}
+  landColour2: {r: 0.5882353, g: 0.76470596, b: 0.7372549, a: 1}
+  landColour3: {r: 0.54509807, g: 0.7058824, b: 0.68235296, a: 1}
   landColourNoise01:
     scale: 0.49
     octaves: 9
@@ -62,8 +62,8 @@ MonoBehaviour:
     smearOctaves: 1
     smearFalloff: 9.53
     smearIntensity: 15.73
-  waterColour0: {r: 0.7647059, g: 0.58431375, b: 0.2627451, a: 1}
-  waterColour1: {r: 0.93333334, g: 0.69411767, b: 0.27058825, a: 1}
+  waterColour0: {r: 0.3764706, g: 0.0627451, b: 0.043137256, a: 1}
+  waterColour1: {r: 0.5372549, g: 0.08627451, b: 0.05882353, a: 1}
   waterLevel: 0.5
   waterSpecular: 1
   waterFalloff: 3.1
