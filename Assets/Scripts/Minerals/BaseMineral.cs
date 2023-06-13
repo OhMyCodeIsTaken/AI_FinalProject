@@ -5,5 +5,6 @@ using UnityEngine;
 
 public class BaseMineral
 {
+    public MineralType MineralType;
     public int Amount;
 }
