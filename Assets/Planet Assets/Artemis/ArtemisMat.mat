@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: HadesMat
+  m_Name: ArtemisMat
   m_Shader: {fileID: 4800000, guid: e2204c6c62f801848ba806cf82fe630e, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -25,11 +25,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _CloudMap:
-        m_Texture: {fileID: 2800000, guid: c1e4466229afc2b4282069fcb106e4d7, type: 3}
+        m_Texture: {fileID: 2800000, guid: a63064e890203f64db9167dfaeb10083, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _CloudNormalMap:
-        m_Texture: {fileID: 2800000, guid: 882e65341e0db2a4db7d32b9cd4da8b3, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -49,11 +49,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _GroundMap:
-        m_Texture: {fileID: 2800000, guid: abf868a6f13f02f4ebb4613dad3bfe2f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 92639aef916255e4087a102bb21d7811, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _IllumMap:
-        m_Texture: {fileID: 2800000, guid: 1100c697a12dfd042b3f1288806eda1f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 71371ef2c5c247f48827dc25b79778fa, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -65,7 +65,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
-        m_Texture: {fileID: 2800000, guid: fca3aa73199dd5745b9faf3b426860ba, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6d12f5786028bdd46979cd2b97b341f0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
