@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DepositState : CoroutineState
 {
+    [SerializeField] private MiningSpaceship _miningSpaceship;
+
     [SerializeField] private float _depositElapsedTime;
     [SerializeField] private float _depositCooldown;
     [SerializeField] private int _depositAmount;
@@ -12,7 +14,7 @@ public class DepositState : CoroutineState
     public override bool IsLegal()
     {
         if(handler.Spaceship.OccupyingPlanet == GameManager.Instance.HomePlanet && 
-            !handler.Spaceship.MineralInventory.IsInventoryEmpty )
+            !_miningSpaceship.MineralInventory.IsInventoryEmpty )
         {
             return true;
         }
@@ -32,12 +34,12 @@ public class DepositState : CoroutineState
 
     public override IEnumerator RunState()
     {
-        while (!handler.Spaceship.MineralInventory.IsInventoryEmpty)
+        while (!_miningSpaceship.MineralInventory.IsInventoryEmpty)
         {
             if(_depositElapsedTime >= _depositCooldown)
             {
                 _depositElapsedTime = 0;
-                foreach (Mineral spaceshipMineral in handler.Spaceship.MineralInventory.Minerals)
+                foreach (Mineral spaceshipMineral in _miningSpaceship.MineralInventory.Minerals)
                 {
                     if (spaceshipMineral.Amount > 0)
                     {

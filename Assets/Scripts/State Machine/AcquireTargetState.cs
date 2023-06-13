@@ -41,10 +41,10 @@ public class AcquireTargetState : CoroutineState
             List<MiningQuest> questsRef = GameManager.Instance.HomePlanet.QuestManager.MiningQuests;
             int randomIndex = rand.Next(0, questsRef.Count);
 
-            handler.Spaceship.CurrentMiningQuest = questsRef[randomIndex];
+            handler.Spaceship.CurrentQuest = questsRef[randomIndex];
             handler.Spaceship.IsQuestOngoing = true;
 
-            MiningQuest miningQuestRef = (MiningQuest)handler.Spaceship.CurrentMiningQuest;
+            MiningQuest miningQuestRef = (MiningQuest)handler.Spaceship.CurrentQuest;
 
             // Choose a random Planet from valid Mineral Planets
             List<MineralPlanet> validMineralPlanets = new List<MineralPlanet>();

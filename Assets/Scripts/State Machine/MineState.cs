@@ -5,9 +5,10 @@ using UnityEngine;
 
 public class MineState : CoroutineState
 {
-    Mineral mineralRef;
-    MiningQuest currentMiningQuestRef;
+    private Mineral mineralRef;
+    private MiningQuest currentMiningQuestRef;
 
+    [SerializeField] private MiningSpaceship _miningSpaceship;
 
     [SerializeField] private float _mineElapsedTime;
     [SerializeField] private float _mineCooldown;
@@ -24,8 +25,8 @@ public class MineState : CoroutineState
 
     public override void OnStateEnter()
     {
-        currentMiningQuestRef = (MiningQuest)handler.Spaceship.CurrentMiningQuest;
-        foreach (Mineral mineral in handler.Spaceship.MineralInventory.Minerals)
+        currentMiningQuestRef = (MiningQuest)handler.Spaceship.CurrentQuest;
+        foreach (Mineral mineral in _miningSpaceship.MineralInventory.Minerals)
         {
             if(mineral.MineralType == currentMiningQuestRef.MineralToMine)
             {
@@ -60,7 +61,7 @@ public class MineState : CoroutineState
                         {
                             amountToMine = planetMineral.Amount;
                         }
-                        handler.Spaceship.MineralInventory.TransferMineralToInventory(planetMineral, amountToMine);
+                        _miningSpaceship.MineralInventory.TransferMineralToInventory(planetMineral, amountToMine);
                     }
                 }
             }
