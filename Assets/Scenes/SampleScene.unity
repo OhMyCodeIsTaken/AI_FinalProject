@@ -302,12 +302,20 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 7b7d650bc29792b4fbe34248fd670632, type: 2}
     - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
       propertyPath: _primaryMine
-      value: 
-      objectReference: {fileID: 11400000, guid: 2f2994523b9a3b643a9c9fca13766a49, type: 2}
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
       propertyPath: _secondaryMine
-      value: 
-      objectReference: {fileID: 11400000, guid: c876a288b924972408aa89b08a40db14, type: 2}
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
+      propertyPath: _primaryMineralType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
+      propertyPath: _secondaryMineralType
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
 --- !u!4 &267216068 stripped
@@ -376,12 +384,20 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: f8d3a23a4614ef94aa2dd8bccb530056, type: 2}
     - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
       propertyPath: _primaryMine
-      value: 
-      objectReference: {fileID: 11400000, guid: c876a288b924972408aa89b08a40db14, type: 2}
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
       propertyPath: _secondaryMine
-      value: 
-      objectReference: {fileID: 11400000, guid: 8cfa3fe297c9f1b4ebc81e77d9d52b4a, type: 2}
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
+      propertyPath: _primaryMineralType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
+      propertyPath: _secondaryMineralType
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
 --- !u!4 &279423530 stripped
@@ -450,12 +466,20 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 14aa89ecb8985d244a90ab5815718577, type: 2}
     - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
       propertyPath: _primaryMine
-      value: 
-      objectReference: {fileID: 11400000, guid: 12ee39a0349b19d48aab5886f4f314e6, type: 2}
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
       propertyPath: _secondaryMine
-      value: 
-      objectReference: {fileID: 11400000, guid: 8cfa3fe297c9f1b4ebc81e77d9d52b4a, type: 2}
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
+      propertyPath: _primaryMineralType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
+      propertyPath: _secondaryMineralType
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
 --- !u!4 &436747817 stripped
@@ -698,12 +722,20 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 57710db8396f66c4ea4dac033d7f6415, type: 2}
     - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
       propertyPath: _primaryMine
-      value: 
-      objectReference: {fileID: 11400000, guid: 7bb2aeb34a3f02a46ba677995ab6a36a, type: 2}
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
       propertyPath: _secondaryMine
-      value: 
-      objectReference: {fileID: 11400000, guid: c876a288b924972408aa89b08a40db14, type: 2}
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
+      propertyPath: _primaryMineralType
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
+      propertyPath: _secondaryMineralType
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
 --- !u!4 &912466154 stripped
@@ -772,12 +804,20 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: aad5f00fd0a1d834a964117726180541, type: 2}
     - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
       propertyPath: _primaryMine
-      value: 
-      objectReference: {fileID: 11400000, guid: e91a49fcec27b4f4c8d148af314b9b90, type: 2}
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
       propertyPath: _secondaryMine
-      value: 
-      objectReference: {fileID: 11400000, guid: 2f2994523b9a3b643a9c9fca13766a49, type: 2}
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
+      propertyPath: _primaryMineralType
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
+      propertyPath: _secondaryMineralType
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
 --- !u!4 &936590362 stripped
@@ -846,12 +886,20 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: b6d087b6f70f41648a12b973605c8a97, type: 2}
     - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
       propertyPath: _primaryMine
-      value: 
-      objectReference: {fileID: 11400000, guid: 12ee39a0349b19d48aab5886f4f314e6, type: 2}
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
       propertyPath: _secondaryMine
-      value: 
-      objectReference: {fileID: 11400000, guid: 7bb2aeb34a3f02a46ba677995ab6a36a, type: 2}
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
+      propertyPath: _primaryMineralType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
+      propertyPath: _secondaryMineralType
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
 --- !u!4 &961305849 stripped
@@ -1004,12 +1052,20 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: f0dd864e919582c4982db9e865055aa2, type: 2}
     - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
       propertyPath: _primaryMine
-      value: 
-      objectReference: {fileID: 11400000, guid: c876a288b924972408aa89b08a40db14, type: 2}
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
       propertyPath: _secondaryMine
-      value: 
-      objectReference: {fileID: 11400000, guid: e91a49fcec27b4f4c8d148af314b9b90, type: 2}
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
+      propertyPath: _primaryMineralType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
+      propertyPath: _secondaryMineralType
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
 --- !u!4 &1081347283 stripped
@@ -1157,6 +1213,7 @@ MonoBehaviour:
     Amount: 0
   _umanite:
     Amount: 0
+  _newMinerals: []
 --- !u!114 &1682729894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1237,12 +1294,20 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 0610c36774a58b243b31da952714029f, type: 2}
     - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
       propertyPath: _primaryMine
-      value: 
-      objectReference: {fileID: 11400000, guid: 8cfa3fe297c9f1b4ebc81e77d9d52b4a, type: 2}
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
       propertyPath: _secondaryMine
-      value: 
-      objectReference: {fileID: 11400000, guid: e91a49fcec27b4f4c8d148af314b9b90, type: 2}
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
+      propertyPath: _primaryMineralType
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
+      propertyPath: _secondaryMineralType
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
 --- !u!4 &1838352960 stripped
@@ -1311,12 +1376,20 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 1a900ac633ce3a94383104684f8e0a40, type: 2}
     - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
       propertyPath: _primaryMine
-      value: 
-      objectReference: {fileID: 11400000, guid: 2f2994523b9a3b643a9c9fca13766a49, type: 2}
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
       propertyPath: _secondaryMine
-      value: 
-      objectReference: {fileID: 11400000, guid: 12ee39a0349b19d48aab5886f4f314e6, type: 2}
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
+      propertyPath: _primaryMineralType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
+      propertyPath: _secondaryMineralType
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
 --- !u!4 &1840087944 stripped
@@ -1385,12 +1458,20 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 5e3619a72369a50419917a7ef4c269f0, type: 2}
     - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
       propertyPath: _primaryMine
-      value: 
-      objectReference: {fileID: 11400000, guid: 8cfa3fe297c9f1b4ebc81e77d9d52b4a, type: 2}
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
       propertyPath: _secondaryMine
-      value: 
-      objectReference: {fileID: 11400000, guid: 7bb2aeb34a3f02a46ba677995ab6a36a, type: 2}
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
+      propertyPath: _primaryMineralType
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
+      propertyPath: _secondaryMineralType
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
 --- !u!4 &1852425010 stripped
@@ -1459,12 +1540,20 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 1da1df6da927aad4ab42e7c8caa21ad7, type: 2}
     - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
       propertyPath: _primaryMine
-      value: 
-      objectReference: {fileID: 11400000, guid: 7bb2aeb34a3f02a46ba677995ab6a36a, type: 2}
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
       propertyPath: _secondaryMine
-      value: 
-      objectReference: {fileID: 11400000, guid: 2f2994523b9a3b643a9c9fca13766a49, type: 2}
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
+      propertyPath: _primaryMineralType
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
+      propertyPath: _secondaryMineralType
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
 --- !u!4 &1874795941 stripped
@@ -1677,11 +1766,19 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 147a97414f8434e4abf716c8fa77dc81, type: 2}
     - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
       propertyPath: _primaryMine
-      value: 
-      objectReference: {fileID: 11400000, guid: e91a49fcec27b4f4c8d148af314b9b90, type: 2}
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
       propertyPath: _secondaryMine
-      value: 
-      objectReference: {fileID: 11400000, guid: 12ee39a0349b19d48aab5886f4f314e6, type: 2}
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
+      propertyPath: _primaryMineralType
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711545428137439334, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
+      propertyPath: _secondaryMineralType
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
