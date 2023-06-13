@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class MineralInventory : MonoBehaviour
 {
-    [SerializeField] private List<Mineral> _newMinerals;
+    [SerializeField] private List<Mineral> _minerals;
 
     public bool IsInventoryEmpty
     {
         get
         {
-            foreach (Mineral mineral in NewMinerals)
+            foreach (Mineral mineral in Minerals)
             {
                 if(mineral.Amount > 0)
                 {
@@ -23,7 +23,7 @@ public class MineralInventory : MonoBehaviour
         }
     }
 
-    public List<Mineral> NewMinerals { get => _newMinerals; }
+    public List<Mineral> Minerals { get => _minerals; }
 
     // Start is called before the first frame update
     void Awake()
@@ -40,7 +40,7 @@ public class MineralInventory : MonoBehaviour
         {   
             Mineral newMineral = new Mineral( (MineralType)i );
 
-            NewMinerals.Add(newMineral);
+            Minerals.Add(newMineral);
         }
     }
 
@@ -52,7 +52,7 @@ public class MineralInventory : MonoBehaviour
             return false;
         }
 
-        foreach (Mineral mineral in NewMinerals)
+        foreach (Mineral mineral in Minerals)
         {
             if (mineralToAdd.MineralType == mineral.MineralType)
             {

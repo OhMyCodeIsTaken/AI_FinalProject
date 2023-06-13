@@ -37,7 +37,7 @@ public class DepositState : CoroutineState
             if(_depositElapsedTime >= _depositCooldown)
             {
                 _depositElapsedTime = 0;
-                foreach (Mineral spaceshipMineral in handler.Spaceship.MineralInventory.NewMinerals)
+                foreach (Mineral spaceshipMineral in handler.Spaceship.MineralInventory.Minerals)
                 {
                     if (spaceshipMineral.Amount > 0)
                     {

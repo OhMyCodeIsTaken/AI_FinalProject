@@ -25,7 +25,7 @@ public class MineState : CoroutineState
     public override void OnStateEnter()
     {
         currentMiningQuestRef = (MiningQuest)handler.Spaceship.CurrentMiningQuest;
-        foreach (Mineral mineral in handler.Spaceship.MineralInventory.NewMinerals)
+        foreach (Mineral mineral in handler.Spaceship.MineralInventory.Minerals)
         {
             if(mineral.MineralType == currentMiningQuestRef.MineralToMine)
             {
@@ -47,7 +47,7 @@ public class MineState : CoroutineState
             if (_mineElapsedTime >= _mineCooldown)
             {
                 _mineElapsedTime = 0;
-                foreach (Mineral planetMineral in handler.Spaceship.OccupyingPlanet.MineralInventory.NewMinerals)
+                foreach (Mineral planetMineral in handler.Spaceship.OccupyingPlanet.MineralInventory.Minerals)
                 {
                     if (planetMineral.Amount > 0)
                     {
