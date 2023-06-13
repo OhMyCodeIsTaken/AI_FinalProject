@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1de2f37cb814674b8612ce3013594bf, type: 3}
-  m_Name: Leviathan Planet Asset
+  m_Name: Shiva Planet Asset
   m_EditorClassIdentifier: 
-  seedSurface: 1760558785
-  seedLand: 667080963
-  seedLandColour01: 1895346247
-  seedLandColour23: 1140521327
-  seedCity: 1425280551
-  seedCloud: 1699731315
+  seedSurface: 408116910
+  seedLand: 256394807
+  seedLandColour01: 1000205428
+  seedLandColour23: 1321998684
+  seedCity: 1281921050
+  seedCloud: 31196756
   surfaceNoise:
     scale: 0.9
     octaves: 10
@@ -38,10 +38,10 @@ MonoBehaviour:
     smearOctaves: 1
     smearFalloff: 1.04
     smearIntensity: 1.61
-  landColour0: {r: 0.5372549, g: 0.40784314, b: 0.6431373, a: 1}
-  landColour1: {r: 0.5372549, g: 0.40784317, b: 0.6431373, a: 1}
-  landColour2: {r: 0.5372549, g: 0.40784317, b: 0.6431373, a: 1}
-  landColour3: {r: 0.41568628, g: 0.3137255, b: 0.5019608, a: 1}
+  landColour0: {r: 0.59607846, g: 0.41960785, b: 0.2784314, a: 1}
+  landColour1: {r: 0.27058825, g: 0.16862746, b: 0.08627451, a: 1}
+  landColour2: {r: 0, g: 0.078431375, b: 0, a: 1}
+  landColour3: {r: 0.043137256, g: 0.2509804, b: 0.043137256, a: 1}
   landColourNoise01:
     scale: 0.49
     octaves: 9
@@ -62,13 +62,13 @@ MonoBehaviour:
     smearOctaves: 1
     smearFalloff: 9.53
     smearIntensity: 15.73
-  waterColour0: {r: 0.34117648, g: 0.6784314, b: 0.4862745, a: 1}
-  waterColour1: {r: 0.3764706, g: 0.77254903, b: 0.54509807, a: 1}
+  waterColour0: {r: 0.011764706, g: 0.011764706, b: 0.20392157, a: 1}
+  waterColour1: {r: 0, g: 0, b: 0.34509805, a: 1}
   waterLevel: 0.5
   waterSpecular: 1
   waterFalloff: 3.1
   iceColour: {r: 1, g: 1, b: 0.91764706, a: 1}
-  iceReach: 0.5
+  iceReach: 0.308
   iceHeight: 0.986
   shadowRange: 20
   shadowStrength: 0.4

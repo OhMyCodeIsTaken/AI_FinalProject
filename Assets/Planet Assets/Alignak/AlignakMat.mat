@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: LeviathanMat
+  m_Name: AlignakMat
   m_Shader: {fileID: 4800000, guid: e2204c6c62f801848ba806cf82fe630e, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -25,7 +25,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _CloudMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 2ee8e1a54a03fdd439cccdee0cf02cc8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _CloudNormalMap:
@@ -49,7 +49,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _GroundMap:
-        m_Texture: {fileID: 2800000, guid: 5fcd2f24808713c49982ebd3c0696428, type: 3}
+        m_Texture: {fileID: 2800000, guid: cef88a1b03c847a4a932fe62cde7669e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _IllumMap:
