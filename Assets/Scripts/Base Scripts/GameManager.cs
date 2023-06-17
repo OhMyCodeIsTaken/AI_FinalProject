@@ -5,10 +5,13 @@ using UnityEngine;
 public class GameManager : Singleton<GameManager>
 {
     [SerializeField] private HomePlanet _homePlanet;
+    [SerializeField] private List<MineralPlanet> _mineralPlanets = new List<MineralPlanet>();
+    [SerializeField] private List<PiratePlanet> _piratePlanets = new List<PiratePlanet>();
+
 
     public HomePlanet HomePlanet { get => _homePlanet;}
 
-    [SerializeField] private List<MineralPlanet> _mineralPlanets = new List<MineralPlanet>();
 
     public List<MineralPlanet> MineralPlanets { get => _mineralPlanets; }
+    public List<PiratePlanet> PiratePlanets { get => _piratePlanets; set => _piratePlanets = value; }
 }
