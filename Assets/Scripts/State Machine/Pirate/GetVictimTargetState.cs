@@ -24,7 +24,7 @@ public class GetVictimTargetState : CoroutineState
 
     public override void OnStateExit()
     {
-
+        Debug.Log("Exit Victim State");
     }
 
     public override IEnumerator RunState()
