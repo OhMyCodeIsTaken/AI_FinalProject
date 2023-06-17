@@ -533,8 +533,8 @@ GameObject:
   - component: {fileID: 476305466}
   - component: {fileID: 476305465}
   - component: {fileID: 476305464}
-  - component: {fileID: 476305467}
   - component: {fileID: 476305468}
+  - component: {fileID: 476305469}
   m_Layer: 0
   m_Name: Pirate Planet
   m_TagString: Untagged
@@ -620,21 +620,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 476305462}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &476305467
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 476305462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c4a6be5d7fd8ad48bbd42b92c000f0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mineralInventory: {fileID: 0}
-  rotationSpeed: 0
-  _visitingSpaceships: []
 --- !u!114 &476305468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -647,9 +632,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0cfb1ec633b11e488be1562ecedf0b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mineralInventory: {fileID: 0}
+  mineralInventory: {fileID: 476305469}
   rotationSpeed: 0
   _visitingSpaceships: []
+--- !u!114 &476305469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 476305462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 760f454934fcb9140b14dbbf6355836b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _minerals: []
 --- !u!4 &619486514 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1531949752473780457, guid: ec294b7fd629f2a41aeed3c31340d603, type: 3}
@@ -1265,7 +1263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _movementMod: 3
-  _occupyingPlanet: {fileID: 476305467}
+  _occupyingPlanet: {fileID: 476305468}
   _targetPlanet: {fileID: 0}
   _spaceshipType: 0
   _currentQuest: {fileID: 0}
