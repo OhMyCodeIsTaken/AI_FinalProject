@@ -26,20 +26,34 @@ public class MoveState : CoroutineState
 
     public override IEnumerator RunState()
     {
-        float counter = 0;
         Vector3 startPos = transform.position;
-
 
         Vector3 destination = handler.Spaceship.TargetPlanet.transform.position;
 
-        while (counter < 1)
+        float distanceToPlanet = (destination - startPos).magnitude;
+
+
+        while(distanceToPlanet >= 0.5f)
         {
-            Vector3 posLerp = Vector3.Lerp(startPos, destination, counter);
-            handler.Spaceship.transform.position = posLerp;
-            counter += Time.deltaTime * handler.Spaceship.MovementMod;
+            handler.Spaceship.transform.position = Vector3.MoveTowards(handler.Spaceship.transform.position, 
+                                                   destination, handler.Spaceship.MovementMod * Time.deltaTime);
+
+            distanceToPlanet = (destination - handler.Spaceship.transform.position).magnitude;
             yield return new WaitForEndOfFrame();
         }
 
         handler.Spaceship.transform.position = destination;
+        
+
+        //float counter = 0;
+        //while (counter < 1)
+        //{
+        //    Vector3 posLerp = Vector3.Lerp(startPos, destination, counter);
+        //    handler.Spaceship.transform.position = posLerp;
+        //    counter += Time.deltaTime * handler.Spaceship.MovementMod;
+        //    yield return new WaitForEndOfFrame();
+        //}
+
+        //handler.Spaceship.transform.position = destination;
     }
 }

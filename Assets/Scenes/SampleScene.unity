@@ -1546,6 +1546,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 172589159, guid: 11fea69e3067a174a857224376ad5531, type: 3}
+      propertyPath: _movementMod
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 172589159, guid: 11fea69e3067a174a857224376ad5531, type: 3}
       propertyPath: _occupyingPlanet
       value: 
       objectReference: {fileID: 1682729892}
