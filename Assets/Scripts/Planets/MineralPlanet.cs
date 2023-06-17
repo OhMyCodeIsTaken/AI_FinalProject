@@ -30,7 +30,7 @@ public class MineralPlanet : Planet
             return;
         }
 
-        GameManager.Instance.HomePlanet.MineralPlanets.Add(this);
+        GameManager.Instance.MineralPlanets.Add(this);
 
         _primaryMinedMineral = new Mineral(PrimaryMineralType);
         _primaryMinedMineral.Amount = _primaryMineralProduce;

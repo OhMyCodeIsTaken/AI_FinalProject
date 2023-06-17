@@ -29,7 +29,7 @@ public class GetVictimTargetState : CoroutineState
 
     public override IEnumerator RunState()
     {
-        List<MineralPlanet> mineralPlanetsRef = GameManager.Instance.HomePlanet.MineralPlanets;
+        List<MineralPlanet> mineralPlanetsRef = GameManager.Instance.MineralPlanets;
         System.Random rand = new System.Random();
         MineralPlanet randomMineralPlanet;
         int randomIndex;

@@ -49,7 +49,7 @@ public class GetMiningTargetState : CoroutineState
             // Choose a random Planet from valid Mineral Planets
             List<MineralPlanet> validMineralPlanets = new List<MineralPlanet>();
 
-            foreach (MineralPlanet potentialPlanet in GameManager.Instance.HomePlanet.MineralPlanets)
+            foreach (MineralPlanet potentialPlanet in GameManager.Instance.MineralPlanets)
             {
                 if (potentialPlanet.PrimaryMinedMineral.MineralType == miningQuestRef.MineralToMine ||
                    potentialPlanet.SecondaryMinedMineral.MineralType == miningQuestRef.MineralToMine)
