@@ -81,6 +81,17 @@ PrefabInstance:
       objectReference: {fileID: 999122303}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
+--- !u!114 &6766071361301276470 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2673246061450626156, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
+  m_PrefabInstance: {fileID: 8718033396841079642}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8262582378680143965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a79f1c18e157d64f9aac4e76739152b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8262582378680143965 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 744848528590091015, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
@@ -140,6 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98ab6004c9705af478ffea22f5349c51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damagable: {fileID: 6766071361301276470}
   _movementMod: 3
   _occupyingPlanet: {fileID: 0}
   _targetPlanet: {fileID: 0}

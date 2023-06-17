@@ -113,6 +113,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
+--- !u!114 &248767620021250069 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2673246061450626156, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
+  m_PrefabInstance: {fileID: 2768178801984040057}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3187616418234621822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a79f1c18e157d64f9aac4e76739152b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3187616418234621822 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 744848528590091015, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
@@ -143,9 +154,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7ab0204b5f587642a9b12f9fbf2f883, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movementMod: 1
+  damagable: {fileID: 248767620021250069}
+  _movementMod: 5
   _occupyingPlanet: {fileID: 0}
   _targetPlanet: {fileID: 0}
+  _spaceshipType: 0
   _currentQuest: {fileID: 0}
   IsQuestOngoing: 0
   _mineralInventory: {fileID: 744848528695374697}

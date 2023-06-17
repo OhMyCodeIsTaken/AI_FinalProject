@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Spaceship : MonoBehaviour
 {
+    [SerializeField] private Damagable damagable;
     [SerializeField] private float _movementMod;
     [SerializeField] private Planet _occupyingPlanet;
     [SerializeField] private Planet _targetPlanet;
@@ -18,6 +19,7 @@ public class Spaceship : MonoBehaviour
     public Planet OccupyingPlanet { get => _occupyingPlanet; set => _occupyingPlanet = value; }
     public Planet TargetPlanet { get => _targetPlanet; set => _targetPlanet = value; }
     public SpaceshipType SpaceshipType { get => _spaceshipType; }
+    public Damagable Damagable { get => damagable; }
 
     public void LeaveOccupyingPlanet()
     {
