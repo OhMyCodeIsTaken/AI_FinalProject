@@ -17,8 +17,16 @@ public class Spaceship : MonoBehaviour
     public Planet OccupyingPlanet { get => _occupyingPlanet; set => _occupyingPlanet = value; }
     public Planet TargetPlanet { get => _targetPlanet; set => _targetPlanet = value; }
 
-    public void OnDestroy()
+    public void LeaveOccupyingPlanet()
     {
-        
+        OccupyingPlanet.VisitingSpaceships.Remove(this);
+        OccupyingPlanet = null;
+    }
+
+    public void OccupyPlanet(Planet planet)
+    {
+        planet.VisitingSpaceships.Add(this);
+        OccupyingPlanet = planet;
+        TargetPlanet = null;
     }
 }

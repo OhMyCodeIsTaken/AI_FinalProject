@@ -15,13 +15,12 @@ public class MoveState : CoroutineState
 
     public override void OnStateEnter()
     {
-        
+        handler.Spaceship.LeaveOccupyingPlanet();
     }
 
     public override void OnStateExit()
     {
-        handler.Spaceship.OccupyingPlanet = handler.Spaceship.TargetPlanet;
-        handler.Spaceship.TargetPlanet = null;
+        handler.Spaceship.OccupyPlanet(handler.Spaceship.TargetPlanet);
     }
 
     public override IEnumerator RunState()
