@@ -25,4 +25,22 @@ public class Planet : MonoBehaviour
     {
         RotatePlanet();
     }
+
+    public bool AreThereSpecificVisitingShips(SpaceshipType[] typesToCheck)
+    {
+        foreach (Spaceship spaceship in VisitingSpaceships)
+        {
+            foreach (SpaceshipType type in typesToCheck)
+            {
+                if (spaceship.SpaceshipType == type)
+                {
+                    return true;
+                }
+            }
+
+            
+        }
+
+        return false;
+    }
 }

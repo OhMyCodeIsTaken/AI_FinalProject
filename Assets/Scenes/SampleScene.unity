@@ -153,6 +153,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _homePlanet: {fileID: 1682729892}
+  _mineralPlanets: []
+  _piratePlanets: []
 --- !u!4 &140251937
 Transform:
   m_ObjectHideFlags: 0
@@ -532,8 +534,9 @@ GameObject:
   - component: {fileID: 476305465}
   - component: {fileID: 476305464}
   - component: {fileID: 476305467}
+  - component: {fileID: 476305468}
   m_Layer: 0
-  m_Name: Spawnpoint (1)
+  m_Name: Pirate Planet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -587,7 +590,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 139a6adda4135c342b6e1bdcaf8af5b1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -627,6 +630,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0c4a6be5d7fd8ad48bbd42b92c000f0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mineralInventory: {fileID: 0}
+  rotationSpeed: 0
+  _visitingSpaceships: []
+--- !u!114 &476305468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 476305462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0cfb1ec633b11e488be1562ecedf0b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mineralInventory: {fileID: 0}
@@ -793,15 +811,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 744848528590091014, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15
+      value: 16.77
       objectReference: {fileID: 0}
     - target: {fileID: 744848528590091014, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 744848528590091014, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10
+      value: 8.52
       objectReference: {fileID: 0}
     - target: {fileID: 744848528590091014, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
       propertyPath: m_LocalRotation.w
@@ -809,15 +827,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 744848528590091014, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 744848528590091014, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 744848528590091014, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 744848528590091014, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -841,7 +859,7 @@ PrefabInstance:
       objectReference: {fileID: 999122299}
     - target: {fileID: 1692184563175696007, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
       propertyPath: states.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1692184563175696007, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
       propertyPath: states.Array.data[1]
@@ -851,6 +869,10 @@ PrefabInstance:
       propertyPath: states.Array.data[2]
       value: 
       objectReference: {fileID: 999122296}
+    - target: {fileID: 1692184563175696007, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
+      propertyPath: states.Array.data[3]
+      value: 
+      objectReference: {fileID: 999122303}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
 --- !u!1001 &912466153
@@ -1200,7 +1222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9ae9122f70cec44682bd763331d1976, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Priority: 2
+  Priority: 3
   _pityCounter: 0
   _pityCounterMax: 7
   _scanIntervals: 3
@@ -1216,7 +1238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93e8d858234233d4aa04a5fb3a92f713, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Priority: 3
+  Priority: 4
 --- !u!114 &999122298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1245,9 +1267,25 @@ MonoBehaviour:
   _movementMod: 3
   _occupyingPlanet: {fileID: 476305467}
   _targetPlanet: {fileID: 0}
+  _spaceshipType: 0
   _currentQuest: {fileID: 0}
   IsQuestOngoing: 0
   _mineralInventory: {fileID: 999122298}
+--- !u!114 &999122303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999122295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a35500578e55964ea42043573b7681e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Priority: 2
+  _pirateSpaceship: {fileID: 999122299}
+  _pillageTimer: 3
 --- !u!1001 &1081347282
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1736,7 +1774,6 @@ MonoBehaviour:
   mineralInventory: {fileID: 1682729893}
   rotationSpeed: 15
   _visitingSpaceships: []
-  _mineralPlanets: []
   QuestManager: {fileID: 1682729894}
 --- !u!114 &1682729893
 MonoBehaviour:

@@ -7,6 +7,7 @@ public class Spaceship : MonoBehaviour
     [SerializeField] private float _movementMod;
     [SerializeField] private Planet _occupyingPlanet;
     [SerializeField] private Planet _targetPlanet;
+    [SerializeField] protected SpaceshipType _spaceshipType;
 
     [SerializeField] private Quest _currentQuest;
 
@@ -16,6 +17,7 @@ public class Spaceship : MonoBehaviour
     public float MovementMod { get => _movementMod; set => _movementMod = value; }
     public Planet OccupyingPlanet { get => _occupyingPlanet; set => _occupyingPlanet = value; }
     public Planet TargetPlanet { get => _targetPlanet; set => _targetPlanet = value; }
+    public SpaceshipType SpaceshipType { get => _spaceshipType; }
 
     public void LeaveOccupyingPlanet()
     {
