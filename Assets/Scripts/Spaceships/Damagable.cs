@@ -5,9 +5,12 @@ using UnityEngine.Events;
 
 public class Damagable : MonoBehaviour
 {
+    [SerializeField] private int _damage;
     [SerializeField] private int _maxHealth;
     [SerializeField] private int _currentHealth;
     [SerializeField] private UnityEvent _onDeath;
+
+    public int Damage { get => _damage; }
 
     void Start()
     {

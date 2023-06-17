@@ -65,7 +65,7 @@ PrefabInstance:
       objectReference: {fileID: 999122299}
     - target: {fileID: 1692184563175696007, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
       propertyPath: states.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1692184563175696007, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
       propertyPath: states.Array.data[1]
@@ -79,6 +79,18 @@ PrefabInstance:
       propertyPath: states.Array.data[3]
       value: 
       objectReference: {fileID: 999122303}
+    - target: {fileID: 1692184563175696007, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
+      propertyPath: states.Array.data[4]
+      value: 
+      objectReference: {fileID: 2835249055125240977}
+    - target: {fileID: 2673246061450626156, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
+      propertyPath: _damage
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2673246061450626156, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
+      propertyPath: _maxHealth
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
 --- !u!114 &6766071361301276470 stripped
@@ -174,3 +186,18 @@ MonoBehaviour:
   Priority: 2
   _pirateSpaceship: {fileID: 999122299}
   _pillageTimer: 3
+--- !u!114 &2835249055125240977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8262582378680143965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 072068bb87c79e64ebd206c771fa2c73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Priority: 1
+  _target: {fileID: 0}
+  _attackCooldown: 3

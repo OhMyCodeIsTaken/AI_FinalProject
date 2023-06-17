@@ -10,12 +10,12 @@ public class PillageState : CoroutineState
 
     [SerializeField] private float _pillageTimer;
 
-    private SpaceshipType[] _minersAndSecurity = new SpaceshipType[2] { SpaceshipType.MINER, SpaceshipType.SECURITY };
+    
 
     public override bool IsLegal()
     {
         Planet occupyingPlanet = handler.Spaceship.OccupyingPlanet;
-        if (!occupyingPlanet.AreThereSpecificVisitingShips(_minersAndSecurity) && !occupyingPlanet.MineralInventory.IsInventoryEmpty)
+        if (!occupyingPlanet.MineralInventory.IsInventoryEmpty)
         {
             return true;
         }
