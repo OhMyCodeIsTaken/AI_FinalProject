@@ -11,6 +11,8 @@ public class Planet : MonoBehaviour
 
     [SerializeField] private int rotationSpeed;
 
+    [SerializeField] private List<Spaceship> _visitingSpaceships = new List<Spaceship>();
+
     public MineralInventory MineralInventory { get => mineralInventory; set => mineralInventory = value; }
 
     protected void RotatePlanet()

@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AcquireTargetState : CoroutineState
+public class GetMiningTargetState : CoroutineState
 {
     public override bool IsLegal()
     {
-        if(handler.Spaceship.TargetPlanet == null)
+        if (handler.Spaceship.TargetPlanet == null)
         {
             return true;
         }
@@ -15,12 +15,12 @@ public class AcquireTargetState : CoroutineState
 
     public override void OnStateEnter()
     {
-        
+
     }
 
     public override void OnStateExit()
     {
-        
+
     }
 
     public override IEnumerator RunState()
@@ -44,15 +44,15 @@ public class AcquireTargetState : CoroutineState
             handler.Spaceship.CurrentQuest = questsRef[randomIndex];
             handler.Spaceship.IsQuestOngoing = true;
 
-            MiningQuest miningQuestRef = (MiningQuest)handler.Spaceship.CurrentQuest;
+            MiningQuest miningQuestRef = handler.Spaceship.CurrentQuest as MiningQuest;
 
             // Choose a random Planet from valid Mineral Planets
             List<MineralPlanet> validMineralPlanets = new List<MineralPlanet>();
 
             foreach (MineralPlanet potentialPlanet in GameManager.Instance.HomePlanet.MineralPlanets)
             {
-                if(potentialPlanet.PrimaryMinedMineral.MineralType == miningQuestRef.MineralToMine ||
-                   potentialPlanet.SecondaryMinedMineral.MineralType == miningQuestRef.MineralToMine )
+                if (potentialPlanet.PrimaryMinedMineral.MineralType == miningQuestRef.MineralToMine ||
+                   potentialPlanet.SecondaryMinedMineral.MineralType == miningQuestRef.MineralToMine)
                 {
                     validMineralPlanets.Add(potentialPlanet);
                 }

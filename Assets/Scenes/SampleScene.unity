@@ -1091,6 +1091,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mineralInventory: {fileID: 1682729893}
   rotationSpeed: 15
+  _visitingSpaceships: []
   _mineralPlanets: []
   QuestManager: {fileID: 1682729894}
 --- !u!114 &1682729893
@@ -1547,7 +1548,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 172589159, guid: 11fea69e3067a174a857224376ad5531, type: 3}
       propertyPath: _movementMod
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 172589159, guid: 11fea69e3067a174a857224376ad5531, type: 3}
       propertyPath: _occupyingPlanet

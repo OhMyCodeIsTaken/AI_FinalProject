@@ -16,4 +16,9 @@ public class Spaceship : MonoBehaviour
     public float MovementMod { get => _movementMod; set => _movementMod = value; }
     public Planet OccupyingPlanet { get => _occupyingPlanet; set => _occupyingPlanet = value; }
     public Planet TargetPlanet { get => _targetPlanet; set => _targetPlanet = value; }
+
+    public void OnDestroy()
+    {
+        
+    }
 }

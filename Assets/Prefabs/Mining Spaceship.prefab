@@ -57,7 +57,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 744848528590091015, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
       propertyPath: m_Name
-      value: Spaceship
+      value: Mining Spaceship
       objectReference: {fileID: 0}
     - target: {fileID: 1692184563175696007, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
       propertyPath: Spaceship
@@ -74,15 +74,19 @@ PrefabInstance:
     - target: {fileID: 1692184563175696007, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
       propertyPath: states.Array.data[2]
       value: 
-      objectReference: {fileID: 172589162}
+      objectReference: {fileID: 172589163}
     - target: {fileID: 1692184563175696007, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
       propertyPath: states.Array.data[3]
       value: 
-      objectReference: {fileID: 172589163}
+      objectReference: {fileID: 744848528695374693}
     - target: {fileID: 1692184563175696007, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
       propertyPath: states.Array.data[4]
       value: 
-      objectReference: {fileID: 744848528695374693}
+      objectReference: {fileID: 3318647593517106240}
+    - target: {fileID: 1692184563175696007, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
+      propertyPath: states.Array.data[5]
+      value: 
+      objectReference: {fileID: 3318647593517106240}
     - target: {fileID: 4434681820794712636, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
       propertyPath: _enor.Amount
       value: 0
@@ -145,19 +149,6 @@ MonoBehaviour:
   _currentQuest: {fileID: 0}
   IsQuestOngoing: 0
   _mineralInventory: {fileID: 744848528695374697}
---- !u!114 &172589162
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3187616418234621822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbe6a59e2ebac3043853b48d75b5cca6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Priority: 3
 --- !u!114 &172589163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,3 +196,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _minerals: []
+--- !u!114 &3318647593517106240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3187616418234621822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc67b1b854cf6c047bd2b58868f3a1a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Priority: 3
