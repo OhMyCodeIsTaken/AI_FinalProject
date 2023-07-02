@@ -11,5 +11,7 @@ public class MiningSpaceship : Spaceship
     private void Awake()
     {
         _spaceshipType = SpaceshipType.MINER;
+        OccupyingPlanet = GameManager.Instance.HomePlanet;
+        transform.position = GameManager.Instance.HomePlanet.transform.position;
     }
 }
