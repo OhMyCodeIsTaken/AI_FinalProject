@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HomePlanet : Planet
+public class MiningShipPooler : ObjectPoolGeneric<MiningSpaceship>
 {
-    public QuestManager QuestManager;
 
 }
