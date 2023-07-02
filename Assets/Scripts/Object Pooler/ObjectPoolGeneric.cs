@@ -29,7 +29,9 @@ public class ObjectPoolGeneric<T> : MonoBehaviour where T : MonoBehaviour
     {
         if(_pooledObjects.Count > 0 && _pooledObjects.Peek().gameObject.activeSelf == false )
         {
-            return _pooledObjects.Pop();
+            T poppedObject = _pooledObjects.Pop();
+            poppedObject.gameObject.SetActive(true);
+            return poppedObject;
         }
 
         T newPooledObject = Instantiate(PrefabToPool, transform);
