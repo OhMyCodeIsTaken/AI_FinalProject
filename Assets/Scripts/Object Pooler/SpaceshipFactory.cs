@@ -16,6 +16,14 @@ public class SpaceshipFactory : MonoBehaviour
         }
     }
 
+    public void DestroyShips(int numberOfShips)
+    {
+        for (int i = 0; i < numberOfShips; i++)
+        {
+            Destroy(transform.GetChild(i).gameObject);
+        }
+    }
+
     public void InstantiateMiningShips(int numberOfShips)
     {
         InstantiateShips(_miningShipPrefab, numberOfShips);
