@@ -115,6 +115,10 @@ PrefabInstance:
       propertyPath: _umanite.Amount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6994740851463046585, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 3187616417124082128}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
 --- !u!114 &248767620021250069 stripped
@@ -128,6 +132,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a79f1c18e157d64f9aac4e76739152b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &3187616417124082128 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 744848527848639913, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
+  m_PrefabInstance: {fileID: 2768178801984040057}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3187616418234621822 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 744848528590091015, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
@@ -158,12 +167,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7ab0204b5f587642a9b12f9fbf2f883, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damagable: {fileID: 248767620021250069}
+  _damagable: {fileID: 248767620021250069}
   _movementMod: 5
   _occupyingPlanet: {fileID: 0}
   _targetPlanet: {fileID: 0}
   _spaceshipType: 0
   _currentQuest: {fileID: 0}
+  _healthbar: {fileID: 5150081998493592000}
   IsQuestOngoing: 0
   _mineralInventory: {fileID: 744848528695374697}
 --- !u!114 &172589163
@@ -226,3 +236,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Priority: 3
+--- !u!114 &5150081998493592000 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6994740851463046585, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
+  m_PrefabInstance: {fileID: 2768178801984040057}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfb4101f15770824f85d3842dc0e8d24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

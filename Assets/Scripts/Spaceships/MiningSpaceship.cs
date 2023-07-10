@@ -8,8 +8,9 @@ public class MiningSpaceship : Spaceship
 
     public MineralInventory MineralInventory { get => _mineralInventory; }
 
-    private void Awake()
+    protected override void InitSpaceship()
     {
+        base.InitSpaceship();
         _spaceshipType = SpaceshipType.MINER;
         OccupyingPlanet = GameManager.Instance.HomePlanet;
         transform.position = GameManager.Instance.HomePlanet.transform.position;
