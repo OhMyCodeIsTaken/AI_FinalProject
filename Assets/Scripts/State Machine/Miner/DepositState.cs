@@ -53,6 +53,10 @@ public class DepositState : CoroutineState
                             amountToDeposit = spaceshipMineral.Amount;
                         }
                         GameManager.Instance.HomePlanet.MineralInventory.TransferMineralToInventory(spaceshipMineral, amountToDeposit);
+
+                        int amountOfMineralInInventory = GameManager.Instance.HomePlanet.MineralInventory.Minerals[(int)spaceshipMineral.MineralType].Amount;
+                        GameManager.Instance.UIManager.UpdateMineralText(spaceshipMineral.MineralType, amountOfMineralInInventory);
+                        GameManager.Instance.ScoreManager.UpdateScore(amountToDeposit);
                     }
                 }   
             }

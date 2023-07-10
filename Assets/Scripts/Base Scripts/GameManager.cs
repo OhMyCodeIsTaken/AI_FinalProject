@@ -5,6 +5,8 @@ using UnityEngine;
 public class GameManager : Singleton<GameManager>
 {
     [SerializeField] private Camera _mainCamera;
+    [SerializeField] private ScoreManager _scoreManager;
+    [SerializeField] private UIManager _uiManager;
     [SerializeField] private HomePlanet _homePlanet;
     [SerializeField] private List<MineralPlanet> _mineralPlanets = new List<MineralPlanet>();
     [SerializeField] private List<PiratePlanet> _piratePlanets = new List<PiratePlanet>();
@@ -17,6 +19,8 @@ public class GameManager : Singleton<GameManager>
     public List<MineralPlanet> MineralPlanets { get => _mineralPlanets; }
     public List<PiratePlanet> PiratePlanets { get => _piratePlanets; set => _piratePlanets = value; }
     public Camera MainCamera { get => _mainCamera;}
+    public ScoreManager ScoreManager { get => _scoreManager; }
+    public UIManager UIManager { get => _uiManager; }
 
     public PiratePlanet GetRandomPiratePlanet()
     {
