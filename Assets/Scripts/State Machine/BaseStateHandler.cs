@@ -8,6 +8,8 @@ public class BaseStateHandler : MonoBehaviour
     [SerializeField] private List<CoroutineState> states = new List<CoroutineState>();
     //[SerializeField] private Enemy refEnemy;
     private CoroutineState activeState;
+    private Coroutine _runningRoutine;
+    private Coroutine _runningState;
 
     [SerializeField] public Spaceship Spaceship;
 
@@ -17,11 +19,11 @@ public class BaseStateHandler : MonoBehaviour
     {
         SortStates();
         SubscribeHandler();
-        StartCoroutine(RunStateMachine());
+        _runningRoutine = StartCoroutine(RunStateMachine());
     }
 
 
-    private IEnumerator RunStateMachine()
+    private IEnumerator RunStateMachine(CoroutineState givenState = null)
     {
         while (gameObject.activeInHierarchy)
         {
@@ -30,9 +32,24 @@ public class BaseStateHandler : MonoBehaviour
                 StopCoroutine(activeState.RunState());
                 activeState.OnStateExit();
             }
-            activeState = GetNextState();
+
+            if(!ReferenceEquals(givenState, null))
+            {
+                if(_runningState != null)
+                {
+                    StopCoroutine(_runningState);
+                }
+                activeState = givenState;
+                givenState = null;
+            }
+            else
+            {
+                activeState = GetNextState();
+            }       
+            
             activeState.OnStateEnter();
-            yield return StartCoroutine(activeState.RunState());
+            _runningState = StartCoroutine(activeState.RunState());
+            yield return _runningState;
         }
     }
     private void SortStates()
@@ -59,7 +76,15 @@ public class BaseStateHandler : MonoBehaviour
         return null;
     }
 
+    public void Interrupt(CoroutineState givenState)
+    {
+        if(_runningRoutine != null)
+        {
+            StopCoroutine(_runningRoutine);
+        }
+        _runningRoutine = StartCoroutine(RunStateMachine(givenState));
 
+    }
 
 
 

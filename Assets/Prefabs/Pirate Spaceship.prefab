@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 744848527848639914, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
+      propertyPath: m_TagString
+      value: Pirate
+      objectReference: {fileID: 0}
     - target: {fileID: 744848527848639919, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -59,6 +63,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pirate Spaceship
       objectReference: {fileID: 0}
+    - target: {fileID: 744848528590091015, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
+      propertyPath: m_TagString
+      value: Pirate
+      objectReference: {fileID: 0}
     - target: {fileID: 1692184563175696007, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
       propertyPath: Spaceship
       value: 
@@ -83,6 +91,14 @@ PrefabInstance:
       propertyPath: states.Array.data[4]
       value: 
       objectReference: {fileID: 2835249055125240977}
+    - target: {fileID: 2535379675716672961, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535379675716672961, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2673246061450626156, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
       propertyPath: _damage
       value: 3
@@ -141,8 +157,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9ae9122f70cec44682bd763331d1976, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  handler: {fileID: 0}
   Priority: 3
-  _pityCounter: 0
+  _pityCounter: 6
   _pityCounterMax: 7
   _scanIntervals: 3
 --- !u!114 &999122297
@@ -157,6 +174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93e8d858234233d4aa04a5fb3a92f713, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  handler: {fileID: 0}
   Priority: 4
 --- !u!114 &999122298
 MonoBehaviour:
@@ -204,6 +222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a35500578e55964ea42043573b7681e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  handler: {fileID: 0}
   Priority: 2
   _pirateSpaceship: {fileID: 999122299}
   _pillageTimer: 3
@@ -219,6 +238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 072068bb87c79e64ebd206c771fa2c73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  handler: {fileID: 0}
   Priority: 1
   _target: {fileID: 0}
   _attackCooldown: 3
