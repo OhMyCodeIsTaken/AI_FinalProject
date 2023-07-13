@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 744848527848639914, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
+      propertyPath: m_TagString
+      value: Pirate
+      objectReference: {fileID: 0}
     - target: {fileID: 744848527848639919, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -59,6 +63,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pirate Spaceship
       objectReference: {fileID: 0}
+    - target: {fileID: 744848528590091015, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
+      propertyPath: m_TagString
+      value: Pirate
+      objectReference: {fileID: 0}
     - target: {fileID: 1692184563175696007, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
       propertyPath: Spaceship
       value: 
@@ -83,6 +91,14 @@ PrefabInstance:
       propertyPath: states.Array.data[4]
       value: 
       objectReference: {fileID: 2835249055125240977}
+    - target: {fileID: 2535379675716672961, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535379675716672961, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2673246061450626156, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
       propertyPath: _damage
       value: 3
@@ -95,7 +111,8 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 8262582376778985203}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 744848527848639912, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
 --- !u!114 &1868680010184402659 stripped
 MonoBehaviour:
@@ -129,6 +146,35 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 744848528590091015, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
   m_PrefabInstance: {fileID: 8718033396841079642}
   m_PrefabAsset: {fileID: 0}
+--- !u!54 &8698287836294436138
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8262582378680143965}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
+--- !u!135 &2814624706384471781
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8262582378680143965}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &999122296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,7 +203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93e8d858234233d4aa04a5fb3a92f713, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Priority: 4
+  Priority: 90
 --- !u!114 &999122298
 MonoBehaviour:
   m_ObjectHideFlags: 0

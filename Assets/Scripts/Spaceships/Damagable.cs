@@ -29,7 +29,6 @@ public class Damagable : MonoBehaviour
         if(missingHealth > healAmount)
         {
             _currentHealth += healAmount;
-            return;
         }
         else
         {

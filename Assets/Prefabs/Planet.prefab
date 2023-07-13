@@ -94,10 +94,10 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1531949752473780458}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1531949752473780461
 MonoBehaviour:
@@ -111,24 +111,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 760f454934fcb9140b14dbbf6355836b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bismor:
-    MineralType: 0
-    Amount: 0
-  _jadis:
-    MineralType: 0
-    Amount: 0
-  _enor:
-    MineralType: 0
-    Amount: 0
-  _magnite:
-    MineralType: 0
-    Amount: 0
-  _croppa:
-    MineralType: 0
-    Amount: 0
-  _umanite:
-    MineralType: 0
-    Amount: 0
   _minerals:
   - MineralType: 0
     Amount: 0
@@ -146,9 +128,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mineralInventory: {fileID: 1531949752473780461}
   rotationSpeed: 30
+  _visitingSpaceships: []
   _miningElapsedTime: 0
   _miningCooldown: 5
-  _primaryMine: {fileID: 0}
-  _secondaryMine: {fileID: 0}
+  _primaryMineralType: 0
+  _secondaryMineralType: 0
   _primaryMineralProduce: 3
   _secondaryMineralProduce: 2

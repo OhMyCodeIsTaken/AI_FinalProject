@@ -68,4 +68,23 @@ public class MineralPlanet : Planet
         }
 
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        
+        if(other.CompareTag("Pirate"))
+        {
+            Debug.Log("PIRATE!");
+            AttemptToSendDistressSignal(other);
+        }
+    }
+
+    private void AttemptToSendDistressSignal(Collider other)
+    {
+        if (ReferenceEquals(this, other.GetComponent<PirateSpaceship>().TargetPlanet))
+        {
+            GameManager.Instance.HomePlanet.QuestManager.DistressedPlanets.Add(this);
+        }
+       
+    }
 }
