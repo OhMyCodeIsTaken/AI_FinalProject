@@ -251,8 +251,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Priority: 2
+  _pillageAmount: 15
   _pirateSpaceship: {fileID: 999122299}
-  _pillageTimer: 3
+  _pillageTimer: 7
 --- !u!114 &2835249055125240977
 MonoBehaviour:
   m_ObjectHideFlags: 0

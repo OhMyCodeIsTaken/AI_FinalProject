@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PillageState : CoroutineState
 {
+    [SerializeField] private int _pillageAmount;
+
     // TODO: Ask On how to interupt (relevant to this state)
 
     [SerializeField] private PirateSpaceship _pirateSpaceship;
@@ -14,7 +16,7 @@ public class PillageState : CoroutineState
 
     public override bool IsLegal()
     {
-        Planet occupyingPlanet = handler.Spaceship.OccupyingPlanet;
+        Planet occupyingPlanet = _pirateSpaceship.OccupyingPlanet;
         if (!occupyingPlanet.MineralInventory.IsInventoryEmpty)
         {
             return true;
@@ -36,18 +38,27 @@ public class PillageState : CoroutineState
     public override IEnumerator RunState()
     {
 
-        // After X seconds, pillage all resources on the planet
+        // After X seconds, pillage resources on the planet
         yield return new WaitForSeconds(_pillageTimer);
 
-        // TODO: check how to interupt
-
-        foreach (Mineral planetMineral in handler.Spaceship.OccupyingPlanet.MineralInventory.Minerals)
+        foreach (Mineral planetMineral in _pirateSpaceship.OccupyingPlanet.MineralInventory.Minerals)
         {
             if (planetMineral.Amount > 0)
             {
-                _pirateSpaceship.MineralInventory.TransferMineralToInventory(planetMineral, planetMineral.Amount);
+                int amountToMine;
+                if (planetMineral.Amount >= _pillageAmount)
+                {
+                    amountToMine = _pillageAmount;
+                }
+                else
+                {
+                    amountToMine = planetMineral.Amount;
+                }
+                _pirateSpaceship.MineralInventory.TransferMineralToInventory(planetMineral, amountToMine);
             }
         }
+
+        GameManager.Instance.ScoreManager.UpdateScore(-_pillageAmount);
     }
     
 }
