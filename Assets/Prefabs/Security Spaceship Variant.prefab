@@ -92,6 +92,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2673246061450626156, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
+      propertyPath: _damage
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2673246061450626156, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
       propertyPath: _maxHealth
       value: 10
       objectReference: {fileID: 0}
@@ -146,7 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Priority: 90
---- !u!114 &6304417391968088772
+--- !u!114 &1414801818592836009
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -155,10 +159,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4423973740225808540}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eaf3008550af2fc4fabdd94b7b2f9b87, type: 3}
+  m_Script: {fileID: 11500000, guid: c4095d45f702ca14d8e61b147d7273e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Priority: 3
+  Priority: 1
+  _attackCooldown: 4
 --- !u!114 &5076107418611081418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,6 +179,19 @@ MonoBehaviour:
   Priority: 2
   _healAmount: 2
   _healCooldown: 3
+--- !u!114 &6304417391968088772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4423973740225808540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaf3008550af2fc4fabdd94b7b2f9b87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Priority: 3
 --- !u!114 &6206357044935212578 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6994740851463046585, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
