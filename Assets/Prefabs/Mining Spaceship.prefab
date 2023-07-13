@@ -172,6 +172,7 @@ MonoBehaviour:
   _occupyingPlanet: {fileID: 0}
   _targetPlanet: {fileID: 0}
   _spaceshipType: 0
+  CapsulePivot: {fileID: 8533065948496077293}
   _currentQuest: {fileID: 0}
   _healthbar: {fileID: 5150081998493592000}
   IsQuestOngoing: 0
@@ -247,3 +248,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfb4101f15770824f85d3842dc0e8d24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &8533065948496077293 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5764890858102017428, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
+  m_PrefabInstance: {fileID: 2768178801984040057}
+  m_PrefabAsset: {fileID: 0}

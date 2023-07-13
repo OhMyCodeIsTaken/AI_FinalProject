@@ -9,6 +9,7 @@ public class Spaceship : MonoBehaviour
     [SerializeField] private Planet _occupyingPlanet;
     [SerializeField] private Planet _targetPlanet;
     [SerializeField] protected SpaceshipType _spaceshipType;
+    [SerializeField] public GameObject CapsulePivot;
 
     [SerializeField] private Quest _currentQuest;
 
@@ -25,13 +26,13 @@ public class Spaceship : MonoBehaviour
 
     public void LeaveOccupyingPlanet()
     {
-        OccupyingPlanet.VisitingSpaceships.Remove(this);
+        OccupyingPlanet.LeavePlanet(this);
         OccupyingPlanet = null;
     }
 
     public void OccupyPlanet(Planet planet)
     {
-        planet.VisitingSpaceships.Add(this);
+        planet.EnterPlanet(this);
         OccupyingPlanet = planet;
         TargetPlanet = null;
     }

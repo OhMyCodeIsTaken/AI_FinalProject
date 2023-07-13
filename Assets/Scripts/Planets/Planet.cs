@@ -43,4 +43,35 @@ public class Planet : MonoBehaviour
 
         return false;
     }
+
+    public void EnterPlanet(Spaceship spaceship)
+    {
+        _visitingSpaceships.Add(spaceship);
+
+        ChangeVisitingSpaceshipsOrbit();
+
+    }
+
+    public void LeavePlanet(Spaceship spaceship)
+    {
+        _visitingSpaceships.Remove(spaceship);
+
+        ChangeVisitingSpaceshipsOrbit();
+    }
+
+    private void ChangeVisitingSpaceshipsOrbit()
+    {
+        if(_visitingSpaceships.Count < 1)
+        {
+            // in case the last ship left the planet
+            return;
+        }
+
+        float anglePerShip = 360 / _visitingSpaceships.Count;
+
+        for (int i = 0; i < _visitingSpaceships.Count; i++)
+        {
+            _visitingSpaceships[i].CapsulePivot.transform.eulerAngles = new Vector3(anglePerShip * i, 0, 0);
+        }
+    }
 }
