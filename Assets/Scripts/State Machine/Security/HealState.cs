@@ -9,6 +9,11 @@ public class HealState : CoroutineState
 
     public override bool IsLegal()
     {
+        if(!handler.Spaceship.OccupyingPlanet)
+        {
+            return false;
+        }
+
         //search for injured spaceship in visiting planet
         foreach(Spaceship spaceship in handler.Spaceship.OccupyingPlanet.VisitingSpaceships)
         {

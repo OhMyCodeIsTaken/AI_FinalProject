@@ -36,8 +36,18 @@ public class AttackState : CoroutineState
             yield return null;
         }
 
+        int numberOfPiratesOnPlanet = 0;
+
+        foreach (Spaceship spaceship in handler.Spaceship.OccupyingPlanet.VisitingSpaceships)
+        {
+            if(spaceship.SpaceshipType is SpaceshipType.PIRATE)
+            {
+                numberOfPiratesOnPlanet++;
+            }
+        }
+
         // Firepower is split amoung all pirates on the planet
-        int damagePerSpaceship = handler.Spaceship.Damagable.Damage / handler.Spaceship.OccupyingPlanet.VisitingSpaceships.Count;
+        int damagePerSpaceship = handler.Spaceship.Damagable.Damage / numberOfPiratesOnPlanet;
 
         foreach (Spaceship spaceship in handler.Spaceship.OccupyingPlanet.VisitingSpaceships)
         {
