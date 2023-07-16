@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -26,6 +27,9 @@ public class UIManager : MonoBehaviour
 
     List<TextMeshProUGUI> _mineralsTexts = new List<TextMeshProUGUI>();
     List<TextMeshProUGUI> _mineralsPriceTexts = new List<TextMeshProUGUI>();
+
+    [SerializeField] private TextMeshProUGUI _speedButtonText;
+    [SerializeField] private Image _depletingPirateBar;
 
     private void Awake()
     {
@@ -118,5 +122,13 @@ public class UIManager : MonoBehaviour
         SetDarkFilterVisibility(state);
     }
 
+    public void SetSpeedButtonText(string input)
+    {
+        _speedButtonText.text = input;
+    }
 
+    public void SetPirateBarFillValue(float input)
+    {
+        _depletingPirateBar.fillAmount = input;
+    }
 }

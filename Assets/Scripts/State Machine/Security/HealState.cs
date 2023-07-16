@@ -56,8 +56,9 @@ public class HealState : CoroutineState
             if (spaceship.Damagable.CurrentHealth < spaceship.Damagable.MaxHealth)
             {
                 spaceship.Damagable.Heal(_healAmount);
-                yield return new WaitForSeconds(_healCooldown);
             }
         }
+
+        yield return new WaitForSeconds(_healCooldown);
     }
 }

@@ -31,7 +31,7 @@ public class GetVictimTargetState : CoroutineState
     {
         if (handler.Spaceship.OccupyingPlanet is not PiratePlanet)
         {
-            handler.Spaceship.TargetPlanet = GameManager.Instance.GetRandomPiratePlanet();
+            handler.Spaceship.TargetPlanet = GameManager.Instance.PirateManager.GetRandomPiratePlanet();
             yield return null;
         }
         else

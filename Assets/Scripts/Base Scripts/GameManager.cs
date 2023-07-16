@@ -7,9 +7,10 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private Camera _mainCamera;
     [SerializeField] private ScoreManager _scoreManager;
     [SerializeField] private UIManager _uiManager;
+    [SerializeField] private PirateManager _pirateManager;
     [SerializeField] private HomePlanet _homePlanet;
     [SerializeField] private List<MineralPlanet> _mineralPlanets = new List<MineralPlanet>();
-    [SerializeField] private List<PiratePlanet> _piratePlanets = new List<PiratePlanet>();
+
     private System.Random rand = new System.Random();
     private int randomIndex;
 
@@ -23,18 +24,14 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private int _securityShipCount;
 
     public List<MineralPlanet> MineralPlanets { get => _mineralPlanets; }
-    public List<PiratePlanet> PiratePlanets { get => _piratePlanets; set => _piratePlanets = value; }
+
     public Camera MainCamera { get => _mainCamera;}
     public ScoreManager ScoreManager { get => _scoreManager; }
     public UIManager UIManager { get => _uiManager; }
     public int MiningShipCount { get => _miningShipCount; set => _miningShipCount = value; }
     public int SecurityShipCount { get => _securityShipCount; set => _securityShipCount = value; }
-
-    public PiratePlanet GetRandomPiratePlanet()
-    {
-        randomIndex = rand.Next(0, PiratePlanets.Count);
-        return PiratePlanets[randomIndex];
-    }
+    public PirateManager PirateManager { get => _pirateManager; }
+    public int PirateShipCount { get => _pirateShipCount; }
 
     private MineralPlanet GetRandomMineralPlanet()
     {
@@ -66,10 +63,12 @@ public class GameManager : Singleton<GameManager>
         if(!_isGameSpeedSpedUp)
         {
             Time.timeScale = _gameSpeedMultiplier;
+            UIManager.SetSpeedButtonText("Speed: x3");
         }
         else
         {
             Time.timeScale = 1;
+            UIManager.SetSpeedButtonText("Speed: x1");
         }
 
         _isGameSpeedSpedUp = !_isGameSpeedSpedUp;

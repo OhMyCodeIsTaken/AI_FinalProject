@@ -7,6 +7,6 @@ public class PiratePlanet : Planet
     // Start is called before the first frame update
     private void Awake()
     {
-        GameManager.Instance.PiratePlanets.Add(this);
+        GameManager.Instance.PirateManager.PiratePlanets.Add(this);
     }
 }

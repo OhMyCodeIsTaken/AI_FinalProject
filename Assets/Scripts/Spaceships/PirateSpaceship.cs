@@ -12,5 +12,8 @@ public class PirateSpaceship : Spaceship
     {
         base.InitSpaceship();
         _spaceshipType = SpaceshipType.PIRATE;
+        OccupyingPlanet = GameManager.Instance.PirateManager.GetRandomPiratePlanet();
+        transform.position = OccupyingPlanet.transform.position;
+        Damagable.OnDeath.AddListener(GameManager.Instance.PirateManager.SpawnPirate);
     }
 }
