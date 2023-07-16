@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System;
 
 public class UIManager : MonoBehaviour
 {
@@ -30,12 +31,18 @@ public class UIManager : MonoBehaviour
     List<TextMeshProUGUI> _mineralsPriceTexts = new List<TextMeshProUGUI>();
 
     [SerializeField] private TextMeshProUGUI _speedButtonText;
+    [SerializeField] private TextMeshProUGUI _pirateCounterText;
     [SerializeField] private Image _depletingPirateBar;
 
     private void Awake()
     {
         InitMineralsTexts();
         GameManager.Instance.ScoreManager.OnScoreChange += UpdateScoreUI;
+    }
+
+    internal void SetPirateBarCounter(int pirateShipCount)
+    {
+        _pirateCounterText.text = "x" + pirateShipCount.ToString();
     }
 
     private void UpdateScoreUI(int score)

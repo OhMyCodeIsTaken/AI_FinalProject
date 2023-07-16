@@ -37,6 +37,7 @@ public class PirateManager : MonoBehaviour
         if(GameManager.Instance.PirateShipCount < _timeUntilNextPirateSpawns.Count)
         {
             GameManager.Instance.UIManager.SetPirateBarFillValue(_elapsedTime / _timeUntilNextPirateSpawns[GameManager.Instance.PirateShipCount]);
+            GameManager.Instance.UIManager.SetPirateBarCounter(GameManager.Instance.PirateShipCount);
         }
     }
 }

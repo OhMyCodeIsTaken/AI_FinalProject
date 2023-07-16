@@ -87,6 +87,14 @@ PrefabInstance:
       propertyPath: states.Array.data[5]
       value: 
       objectReference: {fileID: 3318647593517106240}
+    - target: {fileID: 2535379675716672961, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2535379675716672961, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2673246061450626156, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
       propertyPath: _maxHealth
       value: 24
