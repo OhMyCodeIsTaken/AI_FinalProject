@@ -7267,28 +7267,40 @@ MonoBehaviour:
   - _minerals:
     - MineralType: 6
       Amount: 35
+    - MineralType: 2
+      Amount: 35
     - MineralType: 3
       Amount: 35
   - _minerals:
+    - MineralType: 4
+      Amount: 35
+    - MineralType: 1
+      Amount: 35
     - MineralType: 6
       Amount: 35
     - MineralType: 3
       Amount: 35
   - _minerals:
-    - MineralType: 6
-      Amount: 35
-    - MineralType: 3
-      Amount: 35
+    - MineralType: 5
+      Amount: 50
+    - MineralType: 2
+      Amount: 50
   - _minerals:
-    - MineralType: 6
-      Amount: 35
-    - MineralType: 3
-      Amount: 35
+    - MineralType: 1
+      Amount: 100
   - _minerals:
-    - MineralType: 6
-      Amount: 35
+    - MineralType: 1
+      Amount: 40
+    - MineralType: 2
+      Amount: 40
     - MineralType: 3
-      Amount: 35
+      Amount: 40
+    - MineralType: 4
+      Amount: 40
+    - MineralType: 5
+      Amount: 40
+    - MineralType: 6
+      Amount: 40
   _securityShipPrices:
   - _minerals:
     - MineralType: 6
@@ -7313,6 +7325,43 @@ MonoBehaviour:
       Amount: 30
     - MineralType: 3
       Amount: 30
+  - _minerals:
+    - MineralType: 1
+      Amount: 30
+    - MineralType: 6
+      Amount: 30
+    - MineralType: 4
+      Amount: 30
+  - _minerals:
+    - MineralType: 5
+      Amount: 35
+    - MineralType: 2
+      Amount: 35
+    - MineralType: 1
+      Amount: 35
+    - MineralType: 4
+      Amount: 35
+  - _minerals:
+    - MineralType: 3
+      Amount: 50
+    - MineralType: 6
+      Amount: 50
+  - _minerals:
+    - MineralType: 6
+      Amount: 100
+  - _minerals:
+    - MineralType: 1
+      Amount: 40
+    - MineralType: 2
+      Amount: 40
+    - MineralType: 3
+      Amount: 40
+    - MineralType: 4
+      Amount: 40
+    - MineralType: 5
+      Amount: 40
+    - MineralType: 6
+      Amount: 40
 --- !u!1001 &1960647453
 PrefabInstance:
   m_ObjectHideFlags: 0
