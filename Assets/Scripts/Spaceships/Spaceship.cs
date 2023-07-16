@@ -42,6 +42,7 @@ public class Spaceship : MonoBehaviour
         InitSpaceship();
         GameManager.Instance.ChangeSpaceshipCountByType(SpaceshipType, 1);
         _damagable.OnDeath.AddListener(ReduceSpaceshipCount);
+        _damagable.OnDeath.AddListener(LeaveOccupyingPlanet);
     }
 
     private void Start()

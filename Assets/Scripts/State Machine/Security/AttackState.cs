@@ -6,7 +6,7 @@ public class AttackState : CoroutineState
 {
     private SpaceshipType[] _pirates = new SpaceshipType[1] { SpaceshipType.PIRATE };
 
-   
+    private Spaceship _target;
     [SerializeField] private float _attackCooldown;
 
     public override bool IsLegal()
@@ -36,31 +36,20 @@ public class AttackState : CoroutineState
             yield return null;
         }
 
-        int numberOfPiratesOnPlanet = 0;
-
-        foreach (Spaceship spaceship in handler.Spaceship.OccupyingPlanet.VisitingSpaceships)
+        if(_target == null)
         {
-            if(spaceship.SpaceshipType is SpaceshipType.PIRATE)
+            foreach (Spaceship spaceship in handler.Spaceship.OccupyingPlanet.VisitingSpaceships)
             {
-                numberOfPiratesOnPlanet++;
+                if (spaceship.SpaceshipType is SpaceshipType.PIRATE)
+                {
+                    _target = spaceship; // target is first Pirate Found, causing multiple Security to focus fire on the same Pirate
+                    break;
+                }
             }
-        }
+        }        
 
-        // Firepower is split amoung all pirates on the planet
-        int damagePerSpaceship = handler.Spaceship.Damagable.Damage / numberOfPiratesOnPlanet;
-
-        foreach (Spaceship spaceship in handler.Spaceship.OccupyingPlanet.VisitingSpaceships)
-        {
-            // Skips Mining and Security spaceships (also skips itself)
-            if (spaceship is MiningSpaceship || spaceship is SecuritySpaceship)
-            {
-                continue;
-            }
-
-            spaceship.Damagable.TakeDamage(damagePerSpaceship);
+        _target.Damagable.TakeDamage(handler.Spaceship.Damagable.Damage);
             
-        }
-
         yield return new WaitForSeconds(_attackCooldown);
     }
 }

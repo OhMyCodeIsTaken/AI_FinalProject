@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class RaidState : CoroutineState
 {
-    private SpaceshipType[] _minersAndSecurity = new SpaceshipType[2] { SpaceshipType.MINER, SpaceshipType.SECURITY };
+    [SerializeField] private MineralInventory _mineralInventory;
     [SerializeField] private Spaceship _target;
     [SerializeField] private float _attackCooldown;
+
+    System.Random rand = new System.Random();
+    private SpaceshipType[] _minersAndSecurity = new SpaceshipType[2] { SpaceshipType.MINER, SpaceshipType.SECURITY };
     public override bool IsLegal()
     {
         Planet occupyingPlanet = handler.Spaceship.OccupyingPlanet;
@@ -29,8 +32,6 @@ public class RaidState : CoroutineState
 
     public override IEnumerator RunState()
     {
-        // TODO: refactor to make this work with interupts
-
         if(handler.Spaceship.OccupyingPlanet.VisitingSpaceships.Count < 2)
         {
             // Make sure that there is atleast one other spaceship on planet
@@ -52,7 +53,29 @@ public class RaidState : CoroutineState
             }
         }
 
-        _target.Damagable.TakeDamage(handler.Spaceship.Damagable.Damage);
+        if(_target.SpaceshipType is SpaceshipType.SECURITY)
+        {
+            _target.Damagable.TakeDamage(handler.Spaceship.Damagable.Damage);
+        }
+        else
+        {
+            MiningSpaceship miner = _target.GetComponent<MiningSpaceship>();
+            TryToStealRandomMineralFromMiner(miner);
+        }
         yield return new WaitForSeconds(_attackCooldown);
+    }
+
+    private void TryToStealRandomMineralFromMiner(MiningSpaceship miner)
+    {
+        Debug.Log("Trying to rob Miner Ship");
+        int randomMineralTypeIndex = rand.Next(1, 5 + 1);
+
+        Mineral playerMineral = miner.MineralInventory.Minerals[randomMineralTypeIndex];
+
+        if(playerMineral.Amount > 1)
+        {
+        Debug.Log("Robbed Miner Ship");
+            _mineralInventory.TransferMineralToInventory(playerMineral, 1);
+        }
     }
 }

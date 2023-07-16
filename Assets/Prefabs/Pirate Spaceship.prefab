@@ -273,5 +273,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Priority: 1
+  _mineralInventory: {fileID: 999122298}
   _target: {fileID: 0}
   _attackCooldown: 3

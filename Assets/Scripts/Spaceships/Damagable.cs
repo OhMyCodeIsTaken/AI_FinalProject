@@ -44,12 +44,13 @@ public class Damagable : MonoBehaviour
         OnTakeDamage?.Invoke(CurrentHealth, MaxHealth);
         if (CurrentHealth <= 0)
         {
-            Die();
+            Die();    
         }
     }
 
     private void Die()
     {
         OnDeath?.Invoke();
+        Destroy(gameObject);
     }
 }
