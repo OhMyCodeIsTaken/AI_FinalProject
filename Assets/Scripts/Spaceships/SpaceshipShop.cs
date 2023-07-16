@@ -37,7 +37,7 @@ public class SpaceshipShop : MonoBehaviour
         _pricesRef = GetPricesBySpaceshipType(spaceshipType);
 
         // player can only have a maximum of 10 Mining Spaceships and 10 Security Spaceships
-        if (_spaceshipTypeCount > _pricesRef.Count)
+        if (_spaceshipTypeCount >= _pricesRef.Count)
         {
             Debug.Log("You are at max capicity for this type of spaceship!");
             // Reset all refs (_prefabRef, _priceRef etc...) 
@@ -136,5 +136,33 @@ public class SpaceshipShop : MonoBehaviour
         _prefabRef = null;
         _pricesRef = null;
         _priceRef = null;
+    }
+
+    public void PresentMiningShipPrice()
+    {
+        // player can only have a maximum of 10 Mining Spaceships
+        if (GameManager.Instance.MiningShipCount >= _miningShipPrices.Count)
+        {
+            Debug.Log("You are at max capicity for this type of spaceship!");
+            return;
+        }
+
+        Price currentPrice = _miningShipPrices[GameManager.Instance.MiningShipCount];
+
+        GameManager.Instance.UIManager.PresentPrice(currentPrice);
+    }
+
+    public void PresentSecurityShipPrice()
+    {
+        // player can only have a maximum of 10 Security Spaceships
+        if (GameManager.Instance.SecurityShipCount >= _securityShipPrices.Count)
+        {
+            Debug.Log("You are at max capicity for this type of spaceship!");
+            return;
+        }
+
+        Price currentPrice = _securityShipPrices[GameManager.Instance.SecurityShipCount];
+
+        GameManager.Instance.UIManager.PresentPrice(currentPrice);
     }
 }

@@ -17,9 +17,15 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject _darkFilter;
     [SerializeField] private GameObject _buildMenu;
 
-
+    [SerializeField] private TextMeshProUGUI _bismorPriceText;
+    [SerializeField] private TextMeshProUGUI _croppaPriceText;
+    [SerializeField] private TextMeshProUGUI _enorPriceText;
+    [SerializeField] private TextMeshProUGUI _jadizPriceText;
+    [SerializeField] private TextMeshProUGUI _magnitePriceText;
+    [SerializeField] private TextMeshProUGUI _umanitePriceText;
 
     List<TextMeshProUGUI> _mineralsTexts = new List<TextMeshProUGUI>();
+    List<TextMeshProUGUI> _mineralsPriceTexts = new List<TextMeshProUGUI>();
 
     private void Awake()
     {
@@ -40,6 +46,15 @@ public class UIManager : MonoBehaviour
         _mineralsTexts.Add(_jadizAmountText);
         _mineralsTexts.Add(_magniteAmountText);
         _mineralsTexts.Add(_umaniteAmountText);
+
+        _mineralsPriceTexts.Add(_bismorPriceText);
+        _mineralsPriceTexts.Add(_croppaPriceText);
+        _mineralsPriceTexts.Add(_enorPriceText);
+        _mineralsPriceTexts.Add(_jadizPriceText);
+        _mineralsPriceTexts.Add(_magnitePriceText);
+        _mineralsPriceTexts.Add(_umanitePriceText);
+
+        DisablePriceVisibility();
     }
 
     private TextMeshProUGUI GetTextByMineralType(MineralType type)
@@ -65,6 +80,33 @@ public class UIManager : MonoBehaviour
         GetTextByMineralType(mineral).text = amount.ToString();
     }
 
+    public void PresentPrice(Price price)
+    {
+        TextMeshProUGUI uguiRef;
+        foreach (Mineral mineral in price.Minerals)
+        {
+            uguiRef = _mineralsPriceTexts[(int)mineral.MineralType - 1];
+            uguiRef.text = "-" + mineral.Amount.ToString();
+            uguiRef.gameObject.SetActive(true);
+        }
+    }
+
+    public void DisablePriceVisibility()
+    {      
+        foreach (TextMeshProUGUI priceText in _mineralsPriceTexts)
+        {
+            priceText.gameObject.SetActive(false);
+        }
+    }
+
+    public void EnablePriceVisibility()
+    {
+        foreach (TextMeshProUGUI priceText in _mineralsPriceTexts)
+        {
+            priceText.gameObject.SetActive(true);
+        }
+    }
+
     public void SetDarkFilterVisibility(bool state)
     {
         _darkFilter.SetActive(state);
@@ -75,4 +117,6 @@ public class UIManager : MonoBehaviour
         _buildMenu.SetActive(state);
         SetDarkFilterVisibility(state);
     }
+
+
 }
