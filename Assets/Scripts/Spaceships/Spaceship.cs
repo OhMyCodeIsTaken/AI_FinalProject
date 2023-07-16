@@ -40,6 +40,8 @@ public class Spaceship : MonoBehaviour
     private void Awake()
     {
         InitSpaceship();
+        GameManager.Instance.ChangeSpaceshipCountByType(SpaceshipType, 1);
+        _damagable.OnDeath.AddListener(ReduceSpaceshipCount);
     }
 
     private void Start()
@@ -56,5 +58,11 @@ public class Spaceship : MonoBehaviour
     {
         _damagable.OnTakeDamage += _healthbar.UpdateHealthbar;
         _damagable.OnHeal += _healthbar.UpdateHealthbar;
+    }
+
+    private void ReduceSpaceshipCount()
+    {
+        // Called when the spaceship dies;
+        GameManager.Instance.ChangeSpaceshipCountByType(SpaceshipType, -1);
     }
 }
