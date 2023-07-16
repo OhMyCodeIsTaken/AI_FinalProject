@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Priority: 2
-  _healAmount: 2
+  _healAmount: 4
   _healCooldown: 3
 --- !u!114 &6304417391968088772
 MonoBehaviour:

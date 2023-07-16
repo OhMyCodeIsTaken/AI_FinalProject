@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0cfb1ec633b11e488be1562ecedf0b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mineralInventory: {fileID: 5241448533949230375}
+  _mineralInventory: {fileID: 5241448533949230375}
   rotationSpeed: 0
   _visitingSpaceships: []
 --- !u!114 &5241448533949230375
