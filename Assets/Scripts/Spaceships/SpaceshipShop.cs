@@ -209,7 +209,7 @@ public class SpaceshipShop : MonoBehaviour
 
     public void PresentHospitalityUpgradePrice()
     {
-        if (!_wasPlanetDetectionUpgradePurchased)
+        if (!_wasHospitalityUpgradePurchased)
         {
             GameManager.Instance.UIManager.PresentPrice(_hospitalityUpgradePrice);
         }
