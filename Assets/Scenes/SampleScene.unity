@@ -1944,7 +1944,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &326887005
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2050,6 +2050,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1430503971}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: SetBuildMenuVisibility
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1430503971}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: SetUpgradeMenuVisibility
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3516,7 +3528,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5503901175888082849, guid: 851318f057fd7e041949f1fe69283050, type: 3}
       propertyPath: m_text
-      value: Build Security Ship
+      value: Hospitality
       objectReference: {fileID: 0}
     - target: {fileID: 5503901175996472976, guid: 851318f057fd7e041949f1fe69283050, type: 3}
       propertyPath: m_Pivot.x
@@ -3609,30 +3621,34 @@ PrefabInstance:
     - target: {fileID: 5503901175996472977, guid: 851318f057fd7e041949f1fe69283050, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1944928365}
+      objectReference: {fileID: 1430503971}
     - target: {fileID: 5503901175996472977, guid: 851318f057fd7e041949f1fe69283050, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: AttemptToBuySecuritySpaceship
+      value: AttemptToBuyHospitalityUpgrade
       objectReference: {fileID: 0}
     - target: {fileID: 5503901175996472977, guid: 851318f057fd7e041949f1fe69283050, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: PresentSecurityShipPrice
+      value: DisablePriceVisibility
+      objectReference: {fileID: 0}
+    - target: {fileID: 5503901175996472977, guid: 851318f057fd7e041949f1fe69283050, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UIManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5503901175996472978, guid: 851318f057fd7e041949f1fe69283050, type: 3}
       propertyPath: m_Color.b
-      value: 0.7411765
+      value: 0.6698113
       objectReference: {fileID: 0}
     - target: {fileID: 5503901175996472978, guid: 851318f057fd7e041949f1fe69283050, type: 3}
       propertyPath: m_Color.g
-      value: 0.43921572
+      value: 0.6698113
       objectReference: {fileID: 0}
     - target: {fileID: 5503901175996472978, guid: 851318f057fd7e041949f1fe69283050, type: 3}
       propertyPath: m_Color.r
-      value: 0.20000002
+      value: 0.6698113
       objectReference: {fileID: 0}
     - target: {fileID: 5503901175996472983, guid: 851318f057fd7e041949f1fe69283050, type: 3}
       propertyPath: m_Name
-      value: Buy Ship - Security Ship
+      value: Upgrade - Hospitality
       objectReference: {fileID: 0}
     - target: {fileID: 5503901175996472989, guid: 851318f057fd7e041949f1fe69283050, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -3644,7 +3660,7 @@ PrefabInstance:
       objectReference: {fileID: 1430503971}
     - target: {fileID: 5503901175996472989, guid: 851318f057fd7e041949f1fe69283050, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PresentSecurityShipPrice
+      value: PresentHospitalityUpgradePrice
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 851318f057fd7e041949f1fe69283050, type: 3}
@@ -5392,7 +5408,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1365703710}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1430503971}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: SetUpgradeMenuVisibility
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1365703710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5680,6 +5708,7 @@ MonoBehaviour:
   _umaniteAmountText: {fileID: 302138257}
   _darkFilter: {fileID: 326887004}
   _buildMenu: {fileID: 70887227}
+  _upgradeMenu: {fileID: 987489056}
   _bismorPriceText: {fileID: 1673449469}
   _croppaPriceText: {fileID: 1029096984}
   _enorPriceText: {fileID: 1901299560}
@@ -5850,11 +5879,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5503901175888082849, guid: 851318f057fd7e041949f1fe69283050, type: 3}
       propertyPath: m_text
-      value: Security Attack Speed
+      value: Planet Detection Upgrade
       objectReference: {fileID: 0}
     - target: {fileID: 5503901175888082849, guid: 851318f057fd7e041949f1fe69283050, type: 3}
       propertyPath: m_fontSize
-      value: 21.3
+      value: 18.15
       objectReference: {fileID: 0}
     - target: {fileID: 5503901175888082849, guid: 851318f057fd7e041949f1fe69283050, type: 3}
       propertyPath: m_fontSizeBase
@@ -5950,7 +5979,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5503901175996472977, guid: 851318f057fd7e041949f1fe69283050, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5503901175996472977, guid: 851318f057fd7e041949f1fe69283050, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -5959,14 +5988,38 @@ PrefabInstance:
     - target: {fileID: 5503901175996472977, guid: 851318f057fd7e041949f1fe69283050, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1944928365}
+      objectReference: {fileID: 1430503971}
     - target: {fileID: 5503901175996472977, guid: 851318f057fd7e041949f1fe69283050, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: AttemptToBuySecurityAttackSpeedUpgrade
+      value: AttemptToBuyPlanetDetectionUpgrade
+      objectReference: {fileID: 0}
+    - target: {fileID: 5503901175996472977, guid: 851318f057fd7e041949f1fe69283050, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: DisablePriceVisibility
+      objectReference: {fileID: 0}
+    - target: {fileID: 5503901175996472977, guid: 851318f057fd7e041949f1fe69283050, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5503901175996472977, guid: 851318f057fd7e041949f1fe69283050, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5503901175996472978, guid: 851318f057fd7e041949f1fe69283050, type: 3}
+      propertyPath: m_Color.b
+      value: 0.30980393
+      objectReference: {fileID: 0}
+    - target: {fileID: 5503901175996472978, guid: 851318f057fd7e041949f1fe69283050, type: 3}
+      propertyPath: m_Color.g
+      value: 0.65882355
+      objectReference: {fileID: 0}
+    - target: {fileID: 5503901175996472978, guid: 851318f057fd7e041949f1fe69283050, type: 3}
+      propertyPath: m_Color.r
+      value: 0.4156863
       objectReference: {fileID: 0}
     - target: {fileID: 5503901175996472983, guid: 851318f057fd7e041949f1fe69283050, type: 3}
       propertyPath: m_Name
-      value: Upgrade - Security Attack Speed
+      value: Upgrade - Planet Detection Upgrade
       objectReference: {fileID: 0}
     - target: {fileID: 5503901175996472989, guid: 851318f057fd7e041949f1fe69283050, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -5978,7 +6031,7 @@ PrefabInstance:
       objectReference: {fileID: 1430503971}
     - target: {fileID: 5503901175996472989, guid: 851318f057fd7e041949f1fe69283050, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PresentAttackSpeedUpgradePrice
+      value: PresentPlanetDetectionUpgradePrice
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 851318f057fd7e041949f1fe69283050, type: 3}
@@ -6695,7 +6748,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df85be02862b80b44a3bd58e485fb734, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mineralInventory: {fileID: 1682729893}
+  _mineralInventory: {fileID: 0}
   rotationSpeed: 15
   _visitingSpaceships: []
   QuestManager: {fileID: 1682729894}
@@ -7733,9 +7786,13 @@ MonoBehaviour:
       Amount: 40
     - MineralType: 6
       Amount: 40
-  _securityAttackSpeedUpgradePrice:
+  _planetDetectionUpgradePrice:
     _minerals:
-    - MineralType: 2
+    - MineralType: 4
+      Amount: 12
+  _hospitalityUpgradePrice:
+    _minerals:
+    - MineralType: 3
       Amount: 12
 --- !u!1001 &1960647453
 PrefabInstance:

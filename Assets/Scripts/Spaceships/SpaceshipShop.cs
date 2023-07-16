@@ -13,7 +13,10 @@ public class SpaceshipShop : MonoBehaviour
     [SerializeField] private List<Price> _miningShipPrices = new List<Price>();
     [SerializeField] private List<Price> _securityShipPrices = new List<Price>();
 
-    [SerializeField] private Price _securityAttackSpeedUpgradePrice;
+    [SerializeField] private Price _planetDetectionUpgradePrice;
+    private bool _wasPlanetDetectionUpgradePurchased;
+    [SerializeField] private Price _hospitalityUpgradePrice;
+    private bool _wasHospitalityUpgradePurchased;
 
     private GameObject _prefabRef;
     private int _spaceshipTypeCount = -1;
@@ -167,19 +170,53 @@ public class SpaceshipShop : MonoBehaviour
 
         GameManager.Instance.UIManager.PresentPrice(currentPrice);
     }
-
-    public void AttemptToBuySecurityAttackSpeedUpgrade()
+    
+    public void AttemptToBuyPlanetDetectionUpgrade()
     {
-        if(DoesPlayerHaveEnoughResourcesToBuyItem(_securityAttackSpeedUpgradePrice))
+        if(!_wasPlanetDetectionUpgradePurchased && DoesPlayerHaveEnoughResourcesToBuyItem(_planetDetectionUpgradePrice))
         {
-            PayForItem(_securityAttackSpeedUpgradePrice);
+            PayForItem(_planetDetectionUpgradePrice);
 
-            _securityShipPrefab.GetComponent<AttackState>().AttackCooldown--;
+            _wasPlanetDetectionUpgradePurchased = true;
+
+            foreach (MineralPlanet planet in GameManager.Instance.MineralPlanets)
+            {
+                planet.SphereCollider.radius += 1;
+            }
         }
     }
 
-    public void PresentAttackSpeedUpgradePrice()
+    public void PresentPlanetDetectionUpgradePrice()
     {
-        GameManager.Instance.UIManager.PresentPrice(_securityAttackSpeedUpgradePrice);
+        if(!_wasPlanetDetectionUpgradePurchased)
+        {
+            GameManager.Instance.UIManager.PresentPrice(_planetDetectionUpgradePrice);
+        }
+    }
+
+    public void AttemptToBuyHospitalityUpgrade()
+    {
+        // Hospitality heals spaceships that enter a planet (curerntly only subcribes to Homeworld)
+        if (!_wasHospitalityUpgradePurchased && DoesPlayerHaveEnoughResourcesToBuyItem(_hospitalityUpgradePrice))
+        {
+            PayForItem(_hospitalityUpgradePrice);
+
+            _wasHospitalityUpgradePurchased = true;
+
+            GameManager.Instance.HomePlanet.OnEnteringPlanet += Hospitality;
+        }
+    }
+
+    public void PresentHospitalityUpgradePrice()
+    {
+        if (!_wasPlanetDetectionUpgradePurchased)
+        {
+            GameManager.Instance.UIManager.PresentPrice(_hospitalityUpgradePrice);
+        }
+    }
+
+    private void Hospitality(Spaceship spaceship)
+    {
+        spaceship.Damagable.Heal(5);
     }
 }

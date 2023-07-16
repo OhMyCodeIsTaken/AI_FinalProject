@@ -5,15 +5,14 @@ using UnityEngine;
 
 public class Planet : MonoBehaviour
 {
-    [SerializeField] private MineralInventory mineralInventory;
+    public Action<Spaceship> OnEnteringPlanet;
+    private Vector3 _planetRotation = Vector3.up;
 
-    Vector3 planetRotation = Vector3.up;
-
+    [SerializeField] private MineralInventory _mineralInventory;
     [SerializeField] private int rotationSpeed;
-
     [SerializeField] private List<Spaceship> _visitingSpaceships = new List<Spaceship>();
 
-    public MineralInventory MineralInventory { get => mineralInventory; set => mineralInventory = value; }
+    public MineralInventory MineralInventory { get => _mineralInventory; set => _mineralInventory = value; }
     public List<Spaceship> VisitingSpaceships { get => _visitingSpaceships; }
 
     protected void RotatePlanet()
@@ -47,7 +46,7 @@ public class Planet : MonoBehaviour
     public void EnterPlanet(Spaceship spaceship)
     {
         _visitingSpaceships.Add(spaceship);
-
+        OnEnteringPlanet?.Invoke(spaceship);
         ChangeVisitingSpaceshipsOrbit();
 
     }

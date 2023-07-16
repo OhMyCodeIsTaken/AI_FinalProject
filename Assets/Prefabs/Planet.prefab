@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ec585075cfcc3041886e9eb3128d5bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mineralInventory: {fileID: 1531949752473780461}
+  _mineralInventory: {fileID: 1531949752473780461}
   rotationSpeed: 30
   _visitingSpaceships: []
   _miningElapsedTime: 0
@@ -135,3 +135,4 @@ MonoBehaviour:
   _secondaryMineralType: 0
   _primaryMineralProduce: 3
   _secondaryMineralProduce: 2
+  _sphereCollider: {fileID: 1531949752473780456}

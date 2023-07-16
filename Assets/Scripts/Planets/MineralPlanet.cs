@@ -17,11 +17,13 @@ public class MineralPlanet : Planet
 
     [SerializeField] private int _primaryMineralProduce;
     [SerializeField] private int _secondaryMineralProduce;
+    [SerializeField] private SphereCollider _sphereCollider;
 
     public Mineral PrimaryMinedMineral { get => _primaryMinedMineral; }
     public Mineral SecondaryMinedMineral { get => _secondaryMinedMineral; }
     public MineralType PrimaryMineralType { get => _primaryMineralType; }
     public MineralType SecondaryMineralType { get => _secondaryMineralType; }
+    public SphereCollider SphereCollider { get => _sphereCollider; set => _sphereCollider = value; }
 
     private void Awake()
     {

@@ -17,6 +17,7 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private GameObject _darkFilter;
     [SerializeField] private GameObject _buildMenu;
+    [SerializeField] private GameObject _upgradeMenu;
 
     [SerializeField] private TextMeshProUGUI _bismorPriceText;
     [SerializeField] private TextMeshProUGUI _croppaPriceText;
@@ -119,6 +120,12 @@ public class UIManager : MonoBehaviour
     public void SetBuildMenuVisibility(bool state)
     {
         _buildMenu.SetActive(state);
+        SetDarkFilterVisibility(state);
+    }
+
+    public void SetUpgradeMenuVisibility(bool state)
+    {
+        _upgradeMenu.SetActive(state);
         SetDarkFilterVisibility(state);
     }
 
