@@ -9,6 +9,8 @@ public class AttackState : CoroutineState
     private Spaceship _target;
     [SerializeField] private float _attackCooldown;
 
+    public float AttackCooldown { get => _attackCooldown; set => _attackCooldown = value; }
+
     public override bool IsLegal()
     {
         if(handler.Spaceship.OccupyingPlanet.AreThereSpecificVisitingShips(_pirates))
@@ -50,6 +52,6 @@ public class AttackState : CoroutineState
 
         _target.Damagable.TakeDamage(handler.Spaceship.Damagable.Damage);
             
-        yield return new WaitForSeconds(_attackCooldown);
+        yield return new WaitForSeconds(AttackCooldown);
     }
 }

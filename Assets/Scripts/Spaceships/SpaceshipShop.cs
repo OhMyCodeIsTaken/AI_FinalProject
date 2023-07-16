@@ -13,6 +13,8 @@ public class SpaceshipShop : MonoBehaviour
     [SerializeField] private List<Price> _miningShipPrices = new List<Price>();
     [SerializeField] private List<Price> _securityShipPrices = new List<Price>();
 
+    [SerializeField] private Price _securityAttackSpeedUpgradePrice;
+
     private GameObject _prefabRef;
     private int _spaceshipTypeCount = -1;
     private List<Price> _pricesRef;
@@ -50,32 +52,32 @@ public class SpaceshipShop : MonoBehaviour
         _priceRef = _pricesRef[_spaceshipTypeCount];
 
 
-        if (DoesPlayerHaveEnoughResourcesToBuySpaceship())
+        if (DoesPlayerHaveEnoughResourcesToBuyItem(_priceRef))
         {
             _prefabRef = GetPrefabBySpaceshipType(spaceshipType);
-            BuySpaceship();
+            PayForItem(_priceRef);
+            Instantiate(_prefabRef);
         }
 
         // Reset all refs (_prefabRef, _priceRef etc...) 
         ResetRefs();
     }
 
-    private void BuySpaceship()
+    private void PayForItem(Price price)
     {
         Mineral mineralInPlayerInventory;
-        foreach (Mineral mineral in _priceRef.Minerals)
+        foreach (Mineral mineral in price.Minerals)
         {
             mineralInPlayerInventory = GameManager.Instance.HomePlanet.MineralInventory.Minerals[((int)mineral.MineralType) - 1];
             _mineralInventory.TransferMineralToInventory(mineralInPlayerInventory, mineral.Amount);
         }
-        GameManager.Instance.UIManager.UpdateAllMineralUI();
-        Instantiate(_prefabRef);        
+        GameManager.Instance.UIManager.UpdateAllMineralUI();        
     }
 
-    private bool DoesPlayerHaveEnoughResourcesToBuySpaceship()
+    private bool DoesPlayerHaveEnoughResourcesToBuyItem(Price price)
     {
         Mineral mineralInPlayerInventory;
-        foreach (Mineral mineral in _priceRef.Minerals)
+        foreach (Mineral mineral in price.Minerals)
         {
             mineralInPlayerInventory = GameManager.Instance.HomePlanet.MineralInventory.Minerals[((int)mineral.MineralType) - 1];
             
@@ -164,5 +166,20 @@ public class SpaceshipShop : MonoBehaviour
         Price currentPrice = _securityShipPrices[GameManager.Instance.SecurityShipCount];
 
         GameManager.Instance.UIManager.PresentPrice(currentPrice);
+    }
+
+    public void AttemptToBuySecurityAttackSpeedUpgrade()
+    {
+        if(DoesPlayerHaveEnoughResourcesToBuyItem(_securityAttackSpeedUpgradePrice))
+        {
+            PayForItem(_securityAttackSpeedUpgradePrice);
+
+            _securityShipPrefab.GetComponent<AttackState>().AttackCooldown--;
+        }
+    }
+
+    public void PresentAttackSpeedUpgradePrice()
+    {
+        GameManager.Instance.UIManager.PresentPrice(_securityAttackSpeedUpgradePrice);
     }
 }

@@ -33,6 +33,23 @@ public class GameManager : Singleton<GameManager>
     public PirateManager PirateManager { get => _pirateManager; }
     public int PirateShipCount { get => _pirateShipCount; }
 
+    private void Update()
+    {
+        // Only for cheats and testing~!!!!
+        if(Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            Debug.Log("pls");
+            Mineral mineral;
+            for (int i = 1; i <= 6; i++)
+            {
+                mineral = new Mineral((MineralType)i);
+                mineral.Amount = 100;
+                HomePlanet.MineralInventory.AddMineralToInventory(mineral);
+                UIManager.UpdateAllMineralUI();
+            }
+        }
+    }
+
     private MineralPlanet GetRandomMineralPlanet()
     {
         randomIndex = rand.Next(0, MineralPlanets.Count);
