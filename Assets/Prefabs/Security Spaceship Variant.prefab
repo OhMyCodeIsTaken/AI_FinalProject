@@ -97,11 +97,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2673246061450626156, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
       propertyPath: _damage
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2673246061450626156, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
       propertyPath: _maxHealth
-      value: 10
+      value: 35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damagable: {fileID: 1308964495573352439}
-  _movementMod: 5
+  _movementMod: 3
   _occupyingPlanet: {fileID: 0}
   _targetPlanet: {fileID: 0}
   _spaceshipType: 0

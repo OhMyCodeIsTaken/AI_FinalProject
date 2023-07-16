@@ -101,11 +101,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2673246061450626156, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
       propertyPath: _damage
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2673246061450626156, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
       propertyPath: _maxHealth
-      value: 12
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 6994740851463046585, guid: 68dc45c22416525458f55c8bb7260068, type: 3}
       propertyPath: target
@@ -235,7 +235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damagable: {fileID: 6766071361301276470}
-  _movementMod: 7
+  _movementMod: 5
   _occupyingPlanet: {fileID: 0}
   _targetPlanet: {fileID: 0}
   _spaceshipType: 0
@@ -275,4 +275,4 @@ MonoBehaviour:
   Priority: 1
   _mineralInventory: {fileID: 999122298}
   _target: {fileID: 0}
-  _attackCooldown: 3
+  _attackCooldown: 4

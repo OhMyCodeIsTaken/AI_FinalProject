@@ -7781,6 +7781,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Security Spaceship
       objectReference: {fileID: 0}
+    - target: {fileID: 4423973740225808540, guid: e81e4d0d6cf0705469d1c17a8067fb7d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4423973740225808541, guid: e81e4d0d6cf0705469d1c17a8067fb7d, type: 3}
       propertyPath: m_RootOrder
       value: 10
